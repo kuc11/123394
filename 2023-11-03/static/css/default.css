@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(199, 211, 27);
+    background-color:rgb(106, 173, 44);
     margin:0;
 }
 #wrap{
@@ -8,10 +8,11 @@ body{
     margin: 20px auto;
 }
 #wrap tr td{
-    border:1px solid #000;
-    border-radius: 10px;
+    /* border:1px solid #000;*/
+   
 }
 #header{
+    border-radius: 10px;
     height:80px;
     width:100%;
     background:#fff;
@@ -21,8 +22,36 @@ body{
 #slideWrap{
     width:600px;
     height:700px;
+    
 }
 #drinkWrap{
     width:600px;
+    height:350px;
 }
- 
+.eventWrap{
+    height:350px;
+}
+.menuItem{
+    /*width:100px;*/
+    padding-left:50px;
+}
+.slide{ width:100%} /* 부모태그인 #slideWrap의 너비와 같아진다.*/
+.leftmove,.rightmove{
+    width:50px;
+    font-size:30px;
+    text-align:center;
+    color:#fff;
+}
+.leftmove i:hover , .rightmove i:hover{
+    cursor:Pointer;
+}
+.drinkMenu{
+    list-style:none;
+    font-size:20px;
+    font-weight:800;
+}
+.drinkMenu li{
+    height: 35px;
+    border-bottom:1px solid #000;
+    cursor:pointer;
+}
