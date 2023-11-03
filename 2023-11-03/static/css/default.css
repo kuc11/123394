@@ -1,0 +1,28 @@
+body{
+    background-color:rgb(199, 211, 27);
+    margin:0;
+}
+#wrap{
+    width:1200px;
+    border-collapse:collapse;
+    margin: 20px auto;
+}
+#wrap tr td{
+    border:1px solid #000;
+    border-radius: 10px;
+}
+#header{
+    height:80px;
+    width:100%;
+    background:#fff;
+    font-weight:800;
+    font-size: 19px;
+}
+#slideWrap{
+    width:600px;
+    height:700px;
+}
+#drinkWrap{
+    width:600px;
+}
+ 
