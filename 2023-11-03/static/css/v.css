@@ -4,21 +4,9 @@
     border-collapse: collapse;
 }
 .top{
-    border:3px solid red;
     height:200px;
 }
-.low{
-    border:1px solid black;
-}
-.topLeft, .topright, .side{
-    width: 200px;
-}
-.topMiddle{
-    width: 600px;
-}
-.left, .right{
-    width: 400px;
-}
-.left{
-    background:blueviolet;
+
+.topL{
+    border:3px solid #000;
 }
