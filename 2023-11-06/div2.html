@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            width:500px;
+            height:350px;
+            background:paleturquoise;
+            margin:0 0;
+            padding-top:1px
+        }
+        #div1Child1{
+            width:100px;
+            height:100px;
+            background:red;
+            margin-left:250px;
+            margin-top:200px;
+            box-sizing:border-box;
+            
+        }
+        #div1Child2{
+            width:100px;
+            height:100px;
+            background:blue;
+            margin-left:100px;
+            box-sizing:border-box;
+        }
+        #div2{
+            width:200px;
+        }
+        #div2 img{
+            width:100%;
+            opacity:0.4;
+            transition: all 1s ease;
+        }
+        #div2 h2{
+            margin-top:-50px
+        }
+        #div2:hover img{
+            opacity:1;
+        }
+        #div3{
+            width:1000px;
+            height:1000px;
+            background: url(./static/images/web3-1.jpg);
+            background-size:contain; /*배경이미지의 크기*/
+            background-position:center; /* 배경이미지 위치조절(위,중간,아래,왼쪽,오른쪽)*/
+            background-repeat:no-repeat ;/*배경이미지 반복 여부*/
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div1Child1">child1</div>
+        <div id="div1Child2">child2</div>
+    </div>
+
+    <div id="div2">
+        <img src="./static/images/web3-1.jpg" alt="웹페이지">
+        <!-- 이미지의 비율을 모르고 크기를 조절하려 할때 너비와 길이 둘 중 하나만 조절한다.-->
+        <h2>웹페이지사진</h2>
+    </div>
+    <div id="div3">
+
+    </div>
+</body>
+</html>
