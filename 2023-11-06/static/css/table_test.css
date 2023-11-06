@@ -1,0 +1,43 @@
+body{
+    margin:0 auto;
+    
+}
+#wrap{
+    width:1000px;
+    border-collapse:collapse;
+    margin: 20px auto;
+}
+#wrap tr td{
+    border:1px solid #000;
+}
+
+.header{
+    height:25px;
+    font-size:10pt;
+    text-align: right;
+    width:100%;
+}
+.theader{
+    height:50px;
+    font-size:20pt;
+    font-weight:600;
+    text-align:center;
+}
+/* #theader table{
+    width:600px;
+    margin:0 auto;
+
+    태그의 위치를 해당 공간에서 가운데 위치하려면
+    margin을 이용하여 왼쪽 오른쪽 여백을 똑같이
+    설정 되로록 auto를 준다.
+    margin: 0 auto; 는 첫번째값이 위아래여백이고 두번째값이 왼오른쪽여백을 의미;
+    margin:0 auto; 만 설정한다고 해서 가운데로 위치하지않는다. 상자의 너비가 설정이 되지않을 경우에만
+    */
+.list{
+    width:300px;
+    height:500px;
+}
+.imgs{
+    width:700px;
+}
+
