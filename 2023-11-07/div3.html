@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>div3</title>
+
+        <style>
+            #box1{
+                width:500px;
+                height:500px;
+                background:pink;
+                margin-top:100px;
+                position:relative;
+            }
+            #child1{
+                width:100px;
+                height:150px;
+                background:lightcoral;
+                position:absolute;
+                left:150px;
+                top:30px;
+            }
+            #child2{
+                width:100px;
+                height:50px;
+                background:lightgreen;
+                position:relative;
+                top:100px;
+                left:60px;
+                
+            }
+            #topBotton{
+                position:fixed;
+                right:100px;
+                top:200px;
+            }
+            #menu{
+                position:sticky;
+                top:100px;
+                z-index:100;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu">홈 지상최대공모전 시리즈에디션</div>      
+        <div id="box1">
+            <div id="child1"></div>
+            <div id="child2"></div>
+            <div id="topBotton">top</div>
+            
+        </div>
+      
+        <div style="height:800px"></div>
+                 <!-- css-position
+        position=위치, 페이지에서 해당 태그를 배치하는 방법
+        position 값
+            -position:static; 기본적으로 태그가 가지고 있는값
+            -position:relative; 자신이 처음 생성된 위치를 기준으로
+                                top,right,left,bottom 방향으로 이동가능하다.
+                                기준점에서 어디든 이동은 가능하다.
+                                relative일때 기준점을 중심으로 이동이 되기때문에
+                                right, bottom 사용시 주의 해야한다.
+                                기준점에서 right,bottom 이동이 된다.
+            -position: absolute; 상위태그(부모,조상태그)를 기준으로 이동
+                                상위태그들 중에 position(static) 값을 가진 태그가 기준이 된다.
+                                다른 태그에 영향을 주지않는다.
+            -position: fixed: absolute처럼 순서에서 제거되거,
+                            absolute와는 다르게 상위(부모,조상)태그에
+                            귀속 되지않는다.(정확히는 브라우저에 귀속된다.)
+            -position: sticky; 태그의 기본 순서는 유지를 하면서
+                                스크롤 동작시에는 가장 가까운 상위태그에
+                                귀속된다.
+                                
+                -->
+    </body>
+</html>
