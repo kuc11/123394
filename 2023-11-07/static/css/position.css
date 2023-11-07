@@ -92,3 +92,12 @@ nth-child() 가상선택자
     color:aliceblue;
 
 }
+
+#header{
+    width:100%;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index: 100;
+    background:white;
+}
