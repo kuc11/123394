@@ -1,0 +1,94 @@
+body {
+    margin:0;
+}
+
+#wrap{
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+}
+
+#header{
+    width:100%;
+    padding:50px 0;
+}
+.logoWrap
+    {width:100px; height:50px;}
+
+.menuWrap{
+    position:absolute;
+    left:100px;
+    top:0;
+}
+.nav{
+   /* position:relative;*/
+    line-height:90px;
+    /* 줄간격을 의미*/
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    width:800px;
+}
+/*  
+    line-height
+    한줄의 높이를 설정
+    설정된 높이에 안에  텍스트가있다면
+    텍스트의 높이를 고려하여 위아래 여백을
+    씌워준다.
+*/
+.menu{
+    width:150px;
+    /*position:absolute;*/
+}
+.nav.menu:nth-child(2){
+        left:150px;
+}
+.nav.menu:nth-child(3){
+    left:300px;
+}
+.nav.menu:nth-child(4){
+    left:450px;
+}
+.nav.menu:nth-child(5){
+    left:600px;
+}
+/*
+동일한 태그명을 가진 하위 태그르 선택하는법   \absolut는 높이를 없앰?
+.nav .menu:nth-child(3)
+
+nth-child() 가상선택자
+*/
+
+#main{
+    position:relative;
+    width:100%;
+}
+.imgBox{
+    position:relative;
+    width:300px;
+    height:200px;
+    margin-top:15px;
+}
+
+#main .imgBox:nth-child(4){
+    top:-645px;
+    left:315px;
+    height:0;
+}
+#main .imgBox:nth-child(5){
+    top:-230px;
+    left:315px;
+    height:0
+}
+#main .imgBox:nth-child(6){
+    top:-245px;
+    left:calc( 315px * 2 );
+    height:0;
+}
+#foot{
+    width:100%;
+    padding: 50px;
+    background:darkslategray;
+    color:aliceblue;
+
+}
