@@ -1,0 +1,67 @@
+<!-- 과제
+ div 태그를 사용하여
+메인 페이지를 만들기
+자세하게 안 만들어도 되고
+마지막에 만든거 처럼 로고, 메뉴, 본문, foot 구성으로 만들기
+
+단, 본문에 이미지로 채우지 말고 ul 태그를 사용하여
+몇개의 글 표시-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>11월 7일 과제</title>
+        <link rel="stylesheet" href="static/css/h1.css">
+    </head>
+
+
+    <body>
+    <div id="wrap">
+        <header id="header">
+            <div id="logoWrap">
+                <img src="https://loremflickr.com/100/100/restaurant" alc="logo">
+            </div>
+
+            <div id="menuWrap">
+                <nav class="nav">
+                    <div class="menu">가게소개</div>
+                    <div class="menu">음식소개</div>
+                    <div class="menu">단체예약</div>
+                    <div class="menu">문의사항</div>
+                    <div class="menu">오시는길</div>
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <div class="imgBox"><img src="https://loremflickr.com/300/200/food?random=1" alt="food">
+                <ul class="list">
+                    <li>price:15.0</li>
+                </ul>
+            </div>
+            <div class="imgBox"><img src="https://loremflickr.com/300/200/food?random=2" alt="food">
+                <ul class="list">
+                    <li>price:12.0</li>
+                </ul>
+            </div>
+            <div class="imgBox"><img src="https://loremflickr.com/300/200/food?random=3" alt="food">
+                <ul class="list">
+                    <li>price:14.0</li>
+                </ul>
+            </div>
+
+        </main>
+        <div id="hei"></div>
+        <footer id="foot">
+            <p class="footMenu">
+                <b>개인정보처리방침</b>
+                <b>오시는길</b>
+            </p>
+            <address class="addr">
+                대전광역시 중구 선화동 41 방산빌딩 / 대표번호(042) 222-2402 <br>
+                COPYRIGHT 2023(C) 머시기회사.ALL RIGHTS RESERVED
+            </address>
+        </footer>
+    </div>
+    </body>
+</html>

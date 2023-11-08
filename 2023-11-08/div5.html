@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-sclae=1,0">
+        <title>Document</title>
+
+        <style>
+            #menuWrap{
+                width:800px;
+                margin:0 auto;  /*태그의 위치를 브라우저 가운데 표시하려면 너비와
+                                  margin=0 auto; 값을 부여해야한다. */
+                background:gray;
+                color:bisque;
+            }
+
+            .menu{
+                display:inline-block;
+                padding: 15px 30px;
+            }
+            .menu:hover{
+                background:bisque;
+                color:gray;
+                cursor:pointer;
+            }
+            .sub{
+                display:none;
+            }
+        
+            .menu:hover .sub{ /*띄워쓰기는 하위태그를 의미한다.*/
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menuWrap">
+            <div class="menu">
+                HOME
+            </div>
+            <div class="menu">
+                자동차
+                <div class="sub">
+                    <div class="subMenu">시승신청</div>
+                    <div class="subMenu">판매순위</div>
+                </div>
+            </div>
+            <div class="menu">
+                증권
+            </div>
+            <div class="menu">
+                영화
+            </div>
+            <div class="menu">
+                웹
+            </div>
+        </div>
+    </body>
+</html>
+
+
+<!-- 서버: 서비스를 제공하기 위한 운영체제가 설치된 컴퓨터
+            웹서비스를 제공하는 컴퓨터는 웹 서버라고 한다.
+            서버가 서비스를 제공하려면 주소와 port가 필요하다.
+    백엔드-자바, 서버컴퓨터에서 동작하는 프로그램
+    프론트엔드- 클라이언트 컴퓨터에서 동작하는 프로그램 개발-->

@@ -40,16 +40,16 @@ body {
     width:150px;
     /*position:absolute;*/
 }
-.nav.menu:nth-child(2){
+.nav .menu:nth-child(2){
         left:150px;
 }
-.nav.menu:nth-child(3){
+.nav .menu:nth-child(3){
     left:300px;
 }
-.nav.menu:nth-child(4){
+.nav .menu:nth-child(4){
     left:450px;
 }
-.nav.menu:nth-child(5){
+.nav .menu:nth-child(5){
     left:600px;
 }
 /*
