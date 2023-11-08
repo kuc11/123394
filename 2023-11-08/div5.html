@@ -6,10 +6,54 @@
         <title>Document</title>
 
         <style>
+            #main{
+                width:1000px;
+                margin:0 auto;
+            }
+            
+            .image{
+                width:400px;
+                position:relative;
+                right:0;
+                top:0;
+                display:inline-block; /* 중앙에 있던 이미지가 왼쪽으로 이동한 이유로는 확보되었던 영역이 좁아져 auto가 적용이안됨*/
+                /*1margin-bottom:100px;*/
+                transition-property: width,right,top;
+                transition-duration:1s, 1s, 1s;
+            }
+            .imgBox {
+                text-align:center; /*이 태그는 자신이 가운데로 가는게 아닌 자신안에 태그를 가운데로 보냄*/
+                height:300px;
+                margin-bottom:100px; /* 1 */
+            }
+           /* .image:hover{
+                width:200px;
+            }
+            .image:hover img{
+                width:200px;
+            }*/
+          
+            .image img{
+                width:100%;
+            }
+            .imgBox:hover .image{
+                width:200px;
+               /* position:relative;*/
+                right:150px;
+                top:75px;
+            }
+            .detail{
+               display:none;
+            }
+            .imgBox:hover .detail{
+                display:inline-block;
+
+            }
+
             #menuWrap{
                 width:800px;
                 margin:0 auto;  /*태그의 위치를 브라우저 가운데 표시하려면 너비와
-                                  margin=0 auto; 값을 부여해야한다. */
+                                margin=0 auto; 값을 부여해야한다. */
                 background:gray;
                 color:bisque;
             }
@@ -17,6 +61,7 @@
             .menu{
                 display:inline-block;
                 padding: 15px 30px;
+                position:relative;
             }
             .menu:hover{
                 background:bisque;
@@ -25,6 +70,14 @@
             }
             .sub{
                 display:none;
+                position:absolute; /*순서에서 빼서 크기영향을 벗어남*/
+                top:51.6px;
+                background:lightcoral;
+                left:0;
+                width:100%;
+                text-align:center;
+                line-height:30px;
+                color:aliceblue;
             }
         
             .menu:hover .sub{ /*띄워쓰기는 하위태그를 의미한다.*/
@@ -33,9 +86,40 @@
         </style>
     </head>
     <body>
+        
+        <main id="main">
+            <div class="imgBox"> 
+                <div class="image">
+                <img src="https://loremflickr.com/400/300/dog?random=1" alt="error">
+                </div>
+                <div class="detail">
+                    믹스/수컷 <br>
+                    관리번호 2022-5-34
+                </div>
+            </div>
+                
+            <div class="imgBox"> 
+                <div class="image">
+                <img src="https://loremflickr.com/400/300/dog?random=2" alt="error">
+            </div></div>
+            <div class="imgBox"> 
+                <div class="image">
+                <img src="https://loremflickr.com/400/300/dog?random=3" alt="error">
+            </div></div>
+            <div class="imgBox"> 
+                <div class="image">
+                <img src="https://loremflickr.com/400/300/dog?random=4" alt="error">
+            </div></div>
+        </main>
+        
         <div id="menuWrap">
             <div class="menu">
                 HOME
+                <div class="sub">
+                    <div class="subMenu">전체메뉴</div>
+                    <div class="subMenu">문의사항</div>
+                    <div class="subMenu">상담원문의</div>
+                </div>
             </div>
             <div class="menu">
                 자동차
