@@ -1,0 +1,136 @@
+/* default.css*/
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    position:relative;
+}
+#wrap{
+    width:1000px;
+    margin:0 auto;
+    
+}
+.hei{
+    height:800px;
+}
+#header{
+    width:1000px;
+    margin:0 auto;
+    text-align:center;
+    border:1px solid #000;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:white;
+}
+.menuWrap{
+    padding-top:10px;
+}
+.menuWrap .menu{
+            transform:scale(1);
+            transition: transform 1s ease;
+            padding:10px 20px;
+            border-left:1px solid #000;
+            border-right:1px solid #000;
+            
+}
+.menuWrap:hover .menu{
+            transform:scale(1.2);
+}
+
+.menu:hover {
+    cursor:pointer;
+    background:#000;
+    color:white;
+}
+
+.image{
+    position:relative;
+    background:lightblue;
+}
+.image img{
+    width:400px;
+}
+.text{
+    width:400px;
+    position:absolute;
+    left:440px;
+}
+
+
+
+.button{
+    position:fixed;
+    right:50px;
+    bottom:50px;
+}
+.freeSign ,.devTool{
+    margin:10px;
+    border:1px solid #000; 
+}
+.freeSign:hover {
+      cursor:pointer;
+      background:#000;
+      color:white;
+}
+.devTool:hover {
+    cursor:pointer;
+    background:#000;
+    color:white;
+}
+
+
+#footer{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    text-align:center;
+    line-height:50px;
+    background:gray;
+}
+
+
+.siteUse{
+    background:wheat;
+}
+
+.build{
+    text-align:center;
+    width:300px;
+ 
+
+}
+.build img{
+    width:300px;
+    border:1px solid #000;
+}
+.build h3{
+    width:100%;
+    border:1px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background:white;
+   
+}
+.card{
+    position:relative;
+}
+.learn{
+    position:absolute;
+    text-align:center;
+    width:300px;
+    left:400px;
+    top:0;
+}
+.learn img{
+    width: 300px;
+}
+.learn h3{
+    width:100%;
+    border:1px solid #000;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    background:white;
+}
