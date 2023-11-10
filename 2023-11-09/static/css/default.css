@@ -14,6 +14,13 @@ body{
 .hei{
     height:800px;
 }
+#title{
+    margin:30px 0;
+}
+#title img{
+    width:50px;
+    
+}
 #header{
     width:1000px;
     margin:0 auto;
@@ -27,6 +34,7 @@ body{
 }
 .menuWrap{
     padding-top:10px;
+    display:inline;
 }
 .menuWrap .menu{
             transform:scale(1);
@@ -99,6 +107,7 @@ body{
 .build{
     text-align:center;
     width:300px;
+    box-shadow: 5px 5px 5px #000;
  
 
 }
