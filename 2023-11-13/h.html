@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        var weight = prompt("밑변의 길이를 입력하십시오.");
+        var height = prompt("높이를 입력하십시오.");
+        var size = weight * height;
+        document.write("넓이:"+ size)
+
+
         var red = 15;
         var blue = 35;
         var white = 0;
+        document.writeln("<br>"+"빨간컵 :" + red +" 파란컵 :" + blue + "<br>");
         white=white+20;
-        red
+        red = red + white;
+        blue = blue - white;
+        document.writeln("빨간컵 :" + red +" 파란컵 :" + blue);
     </script>
 </head>
 <body>
