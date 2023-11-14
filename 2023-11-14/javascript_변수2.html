@@ -1,0 +1,169 @@
+<!-- javascript_변수2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ="UTF-8">
+    <meta name = "viweport" content = "width=device-width , initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 데이터의 종류는 숫자데이터와 문자데이터
+        // 숫자데이터는 정수데이터, 실수데이터,
+        // 문자데이터 - 자바스크립트에서는 문자열데이터이다.
+        // 문자열데이터를 직접 작서할시에는 반드시 " "(큰따옴표),' '(작은따옴표) 감싸기
+        // 변수는 데이터를 저장하고 사용하기위해 생성한다.
+        // 변수생성 방법
+        // 1. 타입(범위)지정 - var, let, const
+        // 2. 변수 이름 정하기 - 변수의 목적에 맞는 이름으로 카멜표기법, 스네이크표기법 으로작성
+        //                 카멜표기법 - iLoveHtml
+        //                 스네이크표기법 - i_love_html
+        // 3. 초기 데이터 저장 - 대입연산자(=) 로 변수에 처음에 저장할 데이터 저장
+        // 4. var iLoveHtml = 0;
+
+
+        // var birthYear = parseInt(prompt("태어난년도:"));
+        // var age = 2023 - birthYear; //나이구하기
+        // document.write("태어난 년도:" + birthYear + "년, 나이 : " + age + "살 <br>"); ctrl+/
+
+        //parseInt()- 정수로 변환, parseFloat() - 실수로 변환
+        // var apple = 35; // 사과35개 
+        // var per = parseInt(prompt("인원수"));
+        // document.write("총인원: " + per + "명 , 1인당 사과 :" + parseInt((apple/per)) +"개<br>");
+
+        // 원의 반지름을 입력하여 넓이를 구하여 출력하기 , 넓이는 정수만 출력
+        //넓이 구하는 식 : 반지름*반지름*3.14
+        // var circle = parseInt(prompt("반지름을 입력하시오."));
+        // document.write("원의넓이:"+ parseInt(circle*circle*3.14) );
+
+        // 국어, 수학, 역사 3과목의 점수를 각각 입력 받기
+        // 총점과 평균을 출력하기, 평균은 정수만 출력
+
+        // var text = parseInt(prompt("국어 점수"));
+        // var math = parseInt(prompt("수학 점수"));
+        // var dur = parseInt(prompt("역사 점수"));
+        // var total = text +math+ dur;  //총점 계산하기
+        // var average = parseInt(total/3);          //총 과목이 3과목이니까 나누기 3
+        // document.write("총점:"+total+"점"+ "  평균:"+average +"점");
+        
+        // 연산자
+        // 대입연산자 : =, 오른쪽에 데이터를 왼쪽에 저장
+        // 사칙연산자: +, -, *, /, %,
+        // var num1= 24;
+        // var num2= 7;
+        // document.write("+연산자 :" + (num1 +num2));
+        // document.write("<br> -연산자 :" + (num1-num2));
+        // document.write("<br> *연산자 :" + (num1*num2));
+        // document.write("<br> /연산자 :" +(num1/num2));
+        // document.write("<br> %연산자 :" + (num1%num2));
+        // document.write("<br> **연산자" + (2**4));
+
+        // //복합대입연산자 : +=,-=, *=, /=, %=
+        // var a = 10;
+        // a+=5; //a =a+5;
+        // // 증감연산자 : ++, --   위치에 따라 우선순위가 달라짐
+
+        // var num1 = 20;
+        // //num1++;
+        // // a=10
+
+        // // b=a++
+        // // b=a
+        // // a=a+1
+
+        // // b=++a
+        // // a=a+1
+        // // b=a
+
+        // console.log(++num1);
+        // num1--;
+        // console.log(num1);
+        
+        // //비교연산자 : >, <, >=, <=, ==, ===,!=
+        // // 비교를 하기위한 연산자 , 비교연산자의 결과 값은 참 또는 거짓
+        // console.log("> :" + (10>5));
+        // console.log("< :"+ (11<6));
+        // console.log(">= :" +(20>=20));
+        // console.log("<= :" + (24<=30));
+        // console.log("== :" + (45==3));
+        // console.log(" 2.==:" +(45=="45"));
+        // //console.log("3. === :" (45==="45")); //데이터의 종류까지 비교한다.
+        // console.log("같지않다 != :" + (20!=20));
+        
+        // 조건연산자 (삼항연산자)
+        // (조건식) ? 조건식이 참일경우 내용: 조건식이 거짓일경우 내용;
+        // (10>5) ? console.log("10이 5보다 크다.") : console.log("10이 5보다 작다");
+
+        // // T 익스프레스 탑승 가능 키가 130 이상이다.
+        // var tall = parseInt(prompt("당신의 키는"));
+        // (tall>=130) ? console.log("탑승가능") : console.log("탑승 불가");
+        // var result = (tall>=130) ? "탑승가능" : "탑승불가";
+        // console.log(result);
+
+        // // 10과 8을 비교하여 구 수 중에서 큰수를 출력하시오.
+        // var result = (10>8) ? 10 : 8;
+        // console.log("두 수 중에서 큰수:" + result);
+
+        // var num1= parseInt(prompt("첫 번째 정수를 입력"))
+        // var num2= parseInt(prompt("두 번째 정수를 입력"))
+        // var big=(num1>num2) ? num1 : num2;
+        // console.log( "두 수중 큰수: " + big);
+
+        //두 개의 정수를 입력받고, 두수 중에서 가장 작은수를 출력하시오.
+        // var num1 = parseInt(prompt("첫 번째 정수를 입력"));
+        // var num2 = parseInt(prompt("두 번째 정수를 입력"));
+        // var result=(num1<num2)? console.log("가장 작은수:"+num1):console.log("가장 작은수"+num2);
+        // console.log("result");
+
+        // // 생년월일을 입력하여 성인 인지 아닌지 판별하기
+        // var birth = parseInt(prompt("생년월일 8자를 입력하시오."));
+        // // 19991212 -> 19991212/10000 -> 1999.1212
+        // // 3, 4, 6, 7 -> 3*1000 + 4*100 + 6*10 + 7 -> 3467
+        // var age = 2023-parseInt(birth/10000);
+
+        // var result = (age>=19)? "성인": "미성년자";
+        // console.log(result);
+
+        // var num1= parseInt(prompt("10, 100, 50 중에 하나만 입력"));
+
+        // var result = (num1 == 10) ? 10 : "아무것도";
+        // result = (num1 == 100) ? 100 : result;
+        // result = (num1 == 50) ? 50 : result;
+       
+        // console.log("당신은 "+result+"을/를 입력했습니다.");
+        
+        // var text = parseInt(prompt("국어 점수"));
+        // var english = parseInt(prompt("수학 점수"));
+        // var average =(text+english)/2
+        // var result = ((text+english)/2>=65)? "통과" : "낙제" ;
+        // console.log("결과는"+result+"이다.");
+
+        // 노트북을 사고싶다. 두대의 노트북을 장바구니에 담아놓았다.
+        // 1번 노트북의 가격은 1290000원이다.
+        // 2번 노트북의 가격은 1854000원이다.
+        // 현재 내통장의 잔고를 입력하여
+        // 몇번째 노트북 구매가 가능한지 또는 두개 전부 구매가 불가능 한지 구하시오.
+        // var money = parseInt(prompt("당신의 통장의 잔고를 입력하시오"));
+        // var result = (money>=1290000) ? "1번노트북": "두대다 불가능";
+        // var result = (money>=1854000) ? "2번노트북": result;
+        // console.log(result);
+        
+        //세개의 정수를 입력받으세요.
+        //세정수 중에서 가장 큰수만 출력
+        //두개의 숫자가 같은 숫자라면 그래도 큰숫자 출력)
+        //단, 세개의 정수가 모두 같은 숫자라면 모두 같다.
+        var num1 = parseInt(prompt("첫번째 정수값"));
+        var num2 = parseInt(prompt("두번째 정수값"));
+        var num3 = parseInt(prompt("세번째 정수값"));
+        var result = (num1>=num2)? num1:num2;
+        var result = (result>=num3)? result:num3;
+        var result3 = (num1 == num2)? num1: 0;
+        var result3 = (result3 == num3)? result3 : 0;
+        var result2 = (result==result3)? "모두같다":result;
+        console.log(result2);
+        
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

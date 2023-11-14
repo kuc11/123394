@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ocument</title>
     <script>
-        var weight = prompt("밑변의 길이를 입력하십시오.");
-        var height = prompt("높이를 입력하십시오.");
+        var weight = parseInt(prompt("밑변의 길이를 입력하십시오."));
+        var height = parseInt(prompt("높이를 입력하십시오."));
         var size = weight * height;
         document.write("넓이:"+ size)
 
@@ -14,10 +14,13 @@
         var red = 15;
         var blue = 35;
         var white = 0;
-        document.writeln("<br>"+"빨간컵 :" + red +" 파란컵 :" + blue + "<br>");
+        document.writeln("<br>빨간컵 :" + red +" 파란컵 :" + blue + "<br>");
         white=white+20;
         red = red + white;
         blue = blue - white;
+        //하얀컵 = 파란컵
+        //파란컵 = 빨강컵
+        //빨강컵 = 하얀컵   맞교환 예)가격순
         document.writeln("빨간컵 :" + red +" 파란컵 :" + blue);
     </script>
 </head>
