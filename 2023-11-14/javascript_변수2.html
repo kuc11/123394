@@ -141,29 +141,115 @@
         // 2번 노트북의 가격은 1854000원이다.
         // 현재 내통장의 잔고를 입력하여
         // 몇번째 노트북 구매가 가능한지 또는 두개 전부 구매가 불가능 한지 구하시오.
-        // var money = parseInt(prompt("당신의 통장의 잔고를 입력하시오"));
-        // var result = (money>=1290000) ? "1번노트북": "두대다 불가능";
-        // var result = (money>=1854000) ? "2번노트북": result;
-        // console.log(result);
+        //  var money = parseInt(prompt("당신의 통장의 잔고를 입력하시오"));
+        //  var result = (money>=1290000) ? "1번노트북": "두대다 불가능";
+        //  var result = (money>=1854000) ? "2번노트북": result;
+        //  console.log(result);
         
         //세개의 정수를 입력받으세요.
         //세정수 중에서 가장 큰수만 출력
         //두개의 숫자가 같은 숫자라면 그래도 큰숫자 출력)
         //단, 세개의 정수가 모두 같은 숫자라면 모두 같다.
-        var num1 = parseInt(prompt("첫번째 정수값"));
-        var num2 = parseInt(prompt("두번째 정수값"));
-        var num3 = parseInt(prompt("세번째 정수값"));
-        var result = (num1>=num2)? num1:num2;
-        var result = (result>=num3)? result:num3;
-        var result3 = (num1 == num2)? num1: 0;
-        var result3 = (result3 == num3)? result3 : 0;
-        var result2 = (result==result3)? "모두같다":result;
-        console.log(result2);
+        //  var num1 = parseInt(prompt("첫번째 정수값"));
+        //  var num2 = parseInt(prompt("두번째 정수값"));
+        //  var num3 = parseInt(prompt("세번째 정수값"));
+        //  var result = (num1>=num2)? num1:num2;
+        //  var result = (result>=num3)? result:num3;
+        //  var result3 = (num1 == num2)? num1: 0;
+        //  var result3 = (result3 == num3)? result3 : 0;
+        //  var result2 = (result==result3)? "모두같다":result;
+        //  console.log(result2);
+        // var result = (num1==num2)?(num1==num3)?"모두같다":0:0;  
+//         var coin = parseInt( Math.random()*2 );
+// //0. 앞면   1. 뒷면
+//     // var user = parseInt( prompt("0-앞면, 1-뒷면"));
+//     // var result = ( coin == user ) ? "정답" : "틀림";
+//     console.log(coin);
         
+// 과제
+    //  컴퓨터가 육면체 주사위를 던졌다. 
+    //  나도 육면체 주사위를 던졌다.
+    //  주사위 값이 크면 이기는 게임이다.
+    //  내가 승리 했는가 패배 했는가 출력하세요.
+    //  단,  같은 숫자라면 비김!
+    // var cdice = parseInt( Math.random()*6)+1;
+    // var dice = parseInt( Math.random()*6)+1;
+    // // var result = (dice>cdice)? "승리":"패배";
+    // // var result = (dice==cdice)? "비김" : result;
+    // // console.log(result);
+    // // console.log("<br>컴퓨터:"+cdice);
+    // // console.log("<br>사용자:"+dice);
+    //  다른방식)   var result=(dice>cdice)? "승리":(dice==cdice)? "비김":"패배";
+    //      console.log("나:"+dice+" 컴:"+cdice+"  결과:"+result);
 
+
+    //1. 소주 한잔을 마시면 수병이 2분 단축된다.
+    //   어떤 사람이 소주를 매일 닽은 양으로 20년을 마셨다.
+    //   이사람이 하루에 몇잔을 소주를 마시는지 입력 받기
+    
+    // var time= parseInt(prompt("하루에 몇잔을 마셨는지 입력"));
+    // var minute= time*2*365*20;
+    // var hour= parseInt(minute/60);
+    // var day = parseInt(hour/24);
+    // console.log("총 수명이 "+minute+"분이 단축이되었고,  "+ "총"+hour+"시간이 단축이 되었으며, "+"총"+day+"일이 단축이 되었다");
+
+    // var soju = parseInt(prompt());
+    // life = soju*2*365*20;
+    //console.log("총 단축된 수명:" + life+"(분)");
+    //console.log("총 단축된 수명:"+ parseInt(life/60)+"(시간)");
+    //console.log("총 단축된 수명:"+ parseInt(life/60/24) +"(일)");
+
+    //2. 주사위게임
+    //컴퓨터와 나는 각자 주사위를 두개씩 던진다.
+    //주사위에 합이 큰쪽이 이긴다.
+    //내가 이겼는지 졌는지 비겼는지 출력하기
+    //단, 두개의 주사위 값이 1가 나오면 무조건 이긴다.
+        // var dice = parseInt( Math.random()*6)+1;
+        // var dicee = parseInt(Math.random()*6)+1;
+
+        // var cdice = parseInt(Math.random()*6)+1;
+        // var cdicee = parseInt(Math.random()*6)+1;
+
+        // var user = dice+dicee;
+        // var com = cdice+cdicee;
+
+        // var result = (user>com)?"승리":"패배";
+        // var result = (user==2)? "확정승리":result;
+        // var result = (com==2)? "확정패배":result;
+        // var result = (user==com)?"비김":result;
+        // //(user>com) ? (com !=2)? "승리":"패배" :(user == com)? "비김":(user==2)?"승리":"패배"
+        //  console.log("나:"+dice+"+"+dicee+" = "+user);
+        //  console.log("컴퓨터:"+cdice+"+"+cdicee+"="+com);
+        //  console.log("나:"+user+"    컴퓨터:"+com+"    결과:"+result);
+        //  console.log(`컴퓨터 : (${cdice},${cdicee})  ,나 : (${dice},${dicee}) , 결과:${result}`);
+
+        //3. 주차비 정사
+        // apple주차장의 주차요금 표
+        // 기본 주차비 -1000원, 기본 시간 - 30분
+        //(30분 이내 주차시 1000원 , 5분 주차해도 1000원)
+        // 10분당 100원씩 추가 (40분 추차시, 54분 주차시 1200원 )
+        // 2시간 이상 주차시 기본요금 변경
+        //             기본요금 - 1500원
+        //              (2시간 1분주차시 - 1500원, 2시간 34분주차시 - 1800원)
+        // 주차시간을 분다위로 입력하여 주차요금이 얼마인지 출력하시오
+        var time = parseFloat(prompt("주차를 분단위로 얼마나 했는지 입력하시오")/10);
+        var static = 1000;
+        var static2 = 1500;
+        var mon = (time>0)? (time>3)? static+parseInt(time-3)*100:static  : "주차를 안함";
+        var mon = (time>12)? mon-parseInt(time-12)*100:mon;
+        var mon = (time>12)?(time>15)?static2+mon+parseInt(((time-14)>1)?time-14:0)*300:static2+mon:mon;
+        console.log("주차요금:"+mon+"원");
+        //var time = parseInt(prompt("주차시간"));
+        //var const = 1000;
+
+        //cost = (time>=120)? 1500:cost;
+
+        //time = (time>=120)?time-120: (time>=30)? time-30:0;
+        //var price = parseInt(time/10) * 100 +cost;
+        //console.log(`주차요금 : ${price}원`)
     </script>
 </head>
-<body>
+<body> 
 
 </body>
 </html>
