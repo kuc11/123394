@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="veiwport" content="width=device-width, initail-scale=1.0">
+        <title>Document</title>
+        
+        <style>
+            #game{
+                display:flex;
+                
+                column-gap:20px;
+            }
+            #game div{width:400px;}
+            #game div img{width:100%;}
+            #game div img:hover{background:yellow; cursor:pointer;}     
+            
+        </style>
+        
+    </head>
+    <body >
+        <h2>가위바위보를 이겨라.!!!</h2>
+        <div id="game" >
+            <div id="scissors">
+                <img src="static/images/scissors.png" alt="가위이미지">
+            </div>
+            <div id="rock">
+                <img src="static/images/rock.png" alc="바위이미지">
+            </div>
+            <div id="paper">
+                <img src="static/images/paper.png" alt="보자기이미지">
+            </div>
+        </div>
+
+        <!--
+    <div style="display : flex;">
+        <div id="front" style = "width:300px;" onclick="">
+            <img style="width:100%;" src="static/images/coin_front.png" alt="동전 앞면 이미지">
+        </div>
+        <div id="back" style = "width:300px;">
+            <img style="width:100%;" src="static/images/coin_back.png " alt="동전 뒷면 이미지">
+        </div>
+    </div>
+    -->
+    <script src="./static/javascript/if.js"></script>
+    </body>
+</html>

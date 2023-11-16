@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="veiwport" content="width=device-width, initial-scale=1.0"  >
+        <title>Document</title>
+        <script>
+          var user = parseInt(Math.random()*6+1);
+          var com = parseInt(Math.random()*6+1);
+          var result = (user==com)? "비김":
+                        (user>com)? "승리":
+                        (user<com)? "패배": " ";
+          var result = (user==2 && com==2)? "비김":
+                        (user ==2)? "확정승리":
+                        (com == 2)? "확정패배": result;
+            document.write("나:"+user+"  컴:"+com + "   결과:"+result);                    
+
+                        
+        </script>
+        <style>
+           
+        </style>   
+    </head>
+
+    <body>
+
+    </body>
+</html>
