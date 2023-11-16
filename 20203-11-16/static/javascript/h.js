@@ -10,6 +10,34 @@
 //          기본요금 - 2500원
 //8시간 이상 주차시 기본요금 변경
 //      (10시간, 12시간, 9시간43분 전부다 10000원)
-
 //      (2시간1분 주차시 1500원, 2시간 34분주차시 - 1800원)
 // 주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오.
+var time= parseInt(prompt("주차시간을 입력"))
+var cost=1000;
+var price = 0;
+if(time<120){
+    if(time>=30){
+        time=time-30;
+        price = parseInt(time/10)*100+cost;
+        alert("주차요금:"+price);
+    }
+    else{ alert("주차요금:"+cost);}
+}
+else if(time<240){
+    cost=1500;
+    time=time-120;
+    price = parseInt(time/10)*100+cost;
+    alert("주차요금:"+price);
+}
+else if(time<480){
+    cost=2500;
+    time=time-240;
+    price = parseInt(time/10)*100+cost;
+    alert("주차요금:"+price);
+}
+else {
+    cost=10000;
+    time=time-480;
+    price = parseInt(time/10)*100+cost;
+    alert("주차요금:"+price);
+}
