@@ -37,7 +37,18 @@ else if(time<480){
 }
 else {
     cost=10000;
-    time=time-480;
-    price = parseInt(time/10)*100+cost;
-    alert("주차요금:"+price);
 }
+    //  2. if(time>=480){
+    //     cost= 10000; time=10000;   
+    // }
+    //     else if(time>=240){
+    //     cost=2500; time=time-240;
+    // }
+    //     else if(time>=120){
+    //     cost=1500; time=time-120;
+    // }
+    //     else{
+    //        time=time>=30?time-30: 0;
+    //     }
+    // // var price = Math.floor(time/10)*100+cost;
+    // alert("주차요금:"+price+"원")
