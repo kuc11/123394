@@ -1,0 +1,253 @@
+<!-- script_for.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docment</title>
+    <script>
+        // 반복문 - 특정 코드들을 주어진 조건동안 반복적으로 실행시킨다.
+        // 반복문에도 조건식을 작성한다.
+        // 조건식이 참일경우에는 반복 실행할 코드들이 동작하고
+        // 조건식이 거짓이되는 순간 즉시 반복문은 종료된다.
+        // 반복문을 작성할 때 몇번을 반복해야 하는지 잘 생각하고 조건을 완성시켜야한다.
+        // 5번 반복 - 시작 ~ 끝 , 1부터 5까지 , a=1; a<=5; a++
+
+        //for( 초기값; 조건식; 증감식 )
+        // for(var i=13; i<=16; i++){  // ;두개는 반드시 작성해야한다. 
+        //     document.write(i+ "<br>");
+        // }
+        // for(var i=1; i<=9; i++){
+        //     document.write(`2*${i}=${2*i} <br>`); //백틱 "2*3"
+        // }
+
+        // var num = parseInt(prompt("구구단 단수 입력"));     //for 초기값 -> 조건식 ->참 ->{내용} ->증감식 -> 조건식 -> 반복
+        // for(var i=1; i<=9; i++){
+        //     document.write(`${num}x${i}=${num*i }<br>`);
+        // }
+
+        // 정수 하나를 입력 받아서 , 입력한 정수 만큼 반복 되는  반복문 만들기
+        // 내용 반복문에 사용된 변수의 값 출력
+
+        // var input = parseInt(prompt("정수 입력"));
+        // for(var i=1; i<=input; i++){
+         //    document.write(i+"<br>");
+        // // }
+        // for(var i=10; i>1; i--){
+        //     document.write(i);
+        // }
+        // for(var i=1; i<=10; i=i+2){
+         //    document.write(i+`<br>`);
+        // }
+        // for( var i=1; i<=10; i++){
+        //     if(i%2==0)      //중괄호 생략은 실행되는 코드가 한줄일 경우에만 실행이 된다.
+        //         document.write(i+`<br>`);
+
+            
+        // }
+
+        // 문제. 1부터 100까지 중에서의 5의 배수만 출력 하시오.
+        //  for(var i=1; i<=100; i++){
+        //     if(i%7==0)
+        //     document.write(i+"<br>");
+        //  }
+         //1부터 100까지 숫자중에서 4의 배수이며 6의 배수인 4,6공배수 출력
+        //  for (var i=1; i<=100; i++){
+        //     if(i%4==0 && i%6==0)
+        //         document.write(i+"<br>");
+        //  }
+        // var sum = 0;
+        // for(var i=1; i<=10; i++){
+        //     document.write(`1부터 ${i}까지의 합: ${sum=sum+i}<br>`);
+        // }
+        
+        // 동전 앞면 뒷면
+
+        // var ok = 0;
+        // for(var i=1; i<=10; i++){
+        // var coin = Math.floor(Math.random()*2)+1;
+        // var user = prompt("동전 앞, 뒤 면 입력(앞,뒤)");
+        // if((coin==1 && user== "앞") || (coin==2 && user =="뒤")){
+        //     document.write(`정답!! 동전 : ${coin}, 나 : ${user}<br>`);
+        //     ok++;
+        // }
+        // else{
+        //     document.write(`땡!! 동전 : ${coin}, 나 : ${user}<br>`);
+        // }
+        // }
+        // document.write("승리횟수"+ok);
+
+        // 문제 가위바위보 게임 10판 진행
+        // 게임이 끝나면 몇승, 몇패, 몇무 출력
+        // var win = 0;
+        // var lose = 0;
+        // var no = 0;
+        // for(i=1; i<=10; i++){
+        //     var com = parseInt(Math.floor(Math.random()*3)+1);
+        //     var user = parseInt(prompt("바위:1, 가위:2, 보:3 중에 하나를 선택하시오"));
+        //     if(com-user==1 || com-user==-2){
+        //         document.write("나: "+user+"   컴: "+com+" 승<br>");
+        //         win++;
+        //     }
+        //     else if(com==user){
+        //         document.write("나: "+user+"  컴: "+com+" 무<br>");
+        //         no++;
+        //     }
+        //     else{document.write("나: "+user+"  컴: "+com+" 패<br>" );
+        //         lose++;}
+        //     }
+        //     document.write("총: "+win+"승 "+lose+"패 "+no+"무");
+
+                //무작위에 사진을 몇번 출력할것인가
+                // var num = parseInt(prompt("반복횟수 입력"));
+                // for(var i=1; i<=num; i++){
+                //     var img = `<div><img src="https://loremflickr.com/200/200?random=${i}" alt="이미지"></div>`;
+                //     document.write(img);
+                // }
+
+                // for(var i=1; i<=4; i++){
+                //     for(var k=1; k<=3; k++){
+                //         document.write("중첩<br>")
+                //     }
+                //     document.write("<br>")
+                // }
+
+                //구구단 출력
+                // for(var i =1; i<=9; i++){
+                //     document.write(`${i}단<br>`);
+
+                //     for(var r=1; r<=9; r++)
+                //         {document.write(`${i}X${r} = ${i*r}<br>`);}
+
+                //     document.write("<br>")
+                // }
+
+                //반복문이 필요한 상황에서 한번만 실행되는 코드를 반복물없이 작성한다.
+                //작성된코드에 반복문을 감싸준다.
+                // //반복적으로 실행될코드는 그대로두고 반복적으로 실행되면 안되는 코드들을 선별하여
+                // //반복문 밖으로 이동시킨다.
+                //  var row=parseInt(prompt("테이블 몇줄"));        row 세로
+                //  var col=parseInt(prompt("테이블 몇칸"));        col 가로
+                
+                // // //숫자상관없이 홀수칸만 빨간색 배경으로 표시
+                //  var table="<table>"
+                //  for(var i=1;i<=row;i++){
+                //      table += "<tr>";
+                //      for(var k=1;k<=col;k++){
+                //          var num = (i-1)*col+k;
+                //          if(k%2==1){
+                //          table += "<td style=`background:red;`>"+num+"</td>";
+                //          }
+                //          else
+                //          table += "<td>"+num+"</td>";
+                //         }
+                //      table += "</tr>";
+                //  }
+                //  table += "</table>"; //table=table+"</table>"
+                //  document.write( table );
+
+
+                // 반복문의 무한반복 - 몇번 반복해야 하는지 정해지지않은 경우
+                // 정수를 입력하기 -> 그만 입력하기 위해 0을 입력한다.
+                // 동전 앞면 뒷면 맞추기 게임을 하는데 정답 맞출때까지 게임을 계속하도록 한다면
+                // 언제 정답을 맞추게 될지 알수 없기때문에 무한 반복이 필요하다.
+                // for( i=1;i>0;i++ ){
+                //     var coin = Math.floor(Math.random()*2)+1;
+                //     var user = parseInt(prompt("1.앞,2.뒤"));
+                //     if(coin==user){
+                //         document.write("끝");
+                //         break;}
+                // }
+
+                //무한루프 안에서 랜덤값 구하기( 랜덤 범위: 1~100)
+                //랜덤값이 7의 배수일 경우에 반복문을 중단하고,
+                //반복문이 끝날때까지 나온 랜덤값은 출력하기
+                //  for(;true;){
+                //      var random = Math.floor(Math.random()*100)+1;
+                //      document.write(random+"<br>");
+                //      if(random%7==0)break;
+                //  }
+
+                 //무한루프, 나이 입력
+                 //내가 입력한 나이를 토대로 출생년도를 구하고 
+                 //랜덤범위(1950~2003), 랜덤값중에서 내 출생년도가 나오기까지 몇번의
+                 //반복문이 동작했는지 출력하시오.
+
+                //  for(;age<20;){     //20미만, 73초과 일시 재입력
+                //  var age = parseInt(prompt("나이 입력"));}
+                //  var user = 2023-age;
+                //  var a=0;
+                //  for(;true;){
+                //     a++;
+                //     var random =Math.floor(Math.random()*54)+1950; 
+                //     document.write(random+"  번호:"+a+ "<br>");
+                //     if(user==random){
+                //         document.write("  랜덤횟수:"+a);
+                //         break;
+                //     }
+                    
+                 //}
+                //문제 업다운게임 사용자가 컴퓨터에 랜덤값을 맞추는 게임
+                //  var com = Math.floor(Math.random()*50)+1;
+                //  for(;true;){
+                //     var user = parseInt(prompt("업다운 게임"));
+                //     if(user>com){
+                //         alert("DOWN");    
+                //     }
+                //     if(user<com){
+                //         alert("UP");
+                //     }
+                //     if(user==com){
+                //         alert("정답");
+                //         break;
+                //     }
+                //  }
+                 //문제 업다운게임 컴퓨터가 사용자가 지정한 숫자를 맞추는 게임
+                    // var user = parseInt(prompt("정수를 입력"));
+                    // var com = 0;
+                    // var a=0; var b=1; var c=0;
+                    // for(;true;){
+                    //     com = Math.floor(Math.random()*(50-a))+b
+                    //      if(user>com){a=a+com; b=b+com; document.write("up"+com)}
+                    //      if(user<com){a=a+com; document.write("down")}
+                    //      if(user==com){break;}
+                    // }
+                    // document.write(com)
+
+                //문자열의 알파벳 위치 번호 -> 위치번호를 프로그래밍에서 인덱스라고 한다.
+                //  var word ="international prototype";
+                //  //지정한 알파벳의 갯수가 몇개인지 구하기
+                //  var alp = prompt("알파벳 입력")
+                //  var count =0;
+                //  for( var i=0; i<word.length;i++){
+                //     if(word.charAt(i)===alp)
+                //     count++;
+                //  }
+                //  document.write(`${alp}알파벳은 총${count}개있다.`);
+
+                for(var i=1; i<=100; i++){
+                    if(i%3==0){
+                        document.write("<div> pizzle</div>");
+                    }else if(i%10==0){
+                        document.write("<div>buzzle</div>");
+                    }else
+                    document.write(i+" ");
+                }
+        </script>
+    <style>
+        table{
+            border-collapse:collapse ;
+        }
+        table tr td{
+            border:1px solid #000;
+            width:100px;
+            height:50px;
+            text-align:center;
+            
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
