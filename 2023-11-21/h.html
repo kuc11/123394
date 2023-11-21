@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- <div id="result"></div> -->
+    <!--
+        과제
+        인구조사
+        가족구성원의 나이를 입력하기 prompt
+        0을 입력하면 더이상 입력 처리가 안된다.
+        노인 : 65세이상
+        성인: 20세 ~64세
+        청소년 : 8~19
+        아동 1~7ㅅ[
+        
+        총원 100명 : 노인2명, 성인5명,청소년2명,아동3명
+        ]
+    -->
+    <script>
+            var no = 0 , ad =0 , ch = 0 , ah =0
+        while(true){
+            var age = parseInt(prompt("나이를 입력:"));
+            if (age>=65)no++;
+            if (age>=20 && age <=64)ad++;
+            if (age>=8 && age<=19)ch++;
+            if (age>=1 && age<=7)ah++;
+            if (age==0)break;
+        }
+        document.write(`총원 ${no+ad+ch+ah}명: 노인 ${no}명 성인 ${ad}명 청소년 ${ch}명 아동 ${ah}명`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
