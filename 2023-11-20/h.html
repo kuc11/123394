@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          //문제 업다운게임 컴퓨터가 사용자가 지정한 숫자를 맞추는 게임
+                     var user = parseInt(prompt("정수를 입력"));
+                     var com = 0;
+                     var a=0; 
+                     var b=1; 
+                     var c=0;
+                     var d=0;
+                     for(;true;){
+                        if(a==c){
+                            a=a+d;
+                        }
+                        else{
+                            a=c+d;
+                            b=b+c;
+                        }
+                        document.write(c+"초과   "+(50-d)+"미만"+"<br>");
+                         com = Math.floor(Math.random()*(50-a))+b;
+                            a=0;
+                            b=1;
+                          if(user>com){   //작을때
+                              a=a+com;
+                              b=b+com;
+                              c=a;
+                              document.write("a="+a+"  b="+b+"<br>");
+                              document.write("up   "+"<br>");
+                            }
+                          if(user<com){  //클때
+                            a=50-com;
+                            d=a; 
+                            document.write("down  "+com+"<br>");}
+                          if(user==com){break;}
+                     }
+                     document.write(com);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
