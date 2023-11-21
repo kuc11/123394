@@ -1,0 +1,64 @@
+<!--야구게임-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        for(;a==b || a==c || b==c;){
+        var a = Math.floor(Math.random()*9)+1;
+        var b = Math.floor(Math.random()*9)+1;
+        var c = Math.floor(Math.random()*9)+1;
+        }
+        function find(){
+            
+         var num1 = Number($("#num1").val());
+         var num2 = Number($("#num2").val());
+         var num3 = Number($("#num3").val());
+        stk=0;
+        bal=0;
+        out=0;
+        //스트라이크
+        if(num1==a)
+        stk++;
+        if(num2==b)
+        stk++;
+        if(num3==c)
+        stk++;
+        // 볼
+        if(num1==b || num1==c)
+        bal++;
+        if(num2==a || num2==c)
+        bal++;
+        if(num3==a || num3==b)
+        bal++;
+        // 아웃
+        if(num1!=a &&num1!=b &&num1!=c )
+        out++;
+        if(num2!=a &&num2!=b &&num2!=c )
+        out++;
+        if(num3!=a &&num3!=b &&num3!=c )
+        out++;
+        console.log(`${a}${b}${c}`);
+        console.log(`스트라이크: ${stk}   볼:   ${bal} 아웃:  ${out}`); // 아웃을 3-stk-bal로 대체가능
+        if(num1==a&&num2==b&&num3==c)
+        document.write("축하");
+    }
+    
+    </script>
+    <style>
+        input{width:50px;}
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3"> 
+ 
+    <button onclick="find()">실행</button>
+    <!-- <div id="result"></div> -->
+</body>
+</html>
