@@ -62,6 +62,7 @@ for(var i=0;i<num2.length;i++){
         num3.push(num2[i]);
     }
 }
+//.sort()를 사용하면 굳이 순서 맞추게다고 for문 2개 쓸필요없이 426을 246으로 바꿀수 있음
 document.write(num3);
 
 
