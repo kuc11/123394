@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <!-- <div id="result"></div> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="crossorigin="anonymous"></script>
     <!--
         과제
         인구조사
@@ -19,20 +19,56 @@
         총원 100명 : 노인2명, 성인5명,청소년2명,아동3명
         ]
     -->
+
     <script>
-            var no = 0 , ad =0 , ch = 0 , ah =0
-        while(true){
-            var age = parseInt(prompt("나이를 입력:"));
-            if (age>=65)no++;
-            if (age>=20 && age <=64)ad++;
-            if (age>=8 && age<=19)ch++;
-            if (age>=1 && age<=7)ah++;
-            if (age==0)break;
-        }
-        document.write(`총원 ${no+ad+ch+ah}명: 노인 ${no}명 성인 ${ad}명 청소년 ${ch}명 아동 ${ah}명`);
+        // var show = "";
+        //     var no = 0 , ad =0 , ch = 0 , ah =0;
+        // while(true){
+        //     var age = parseInt(prompt("나이를 입력:"));
+        //     if (age>=65)no++;
+        //     if (age>=20 && age <=64)ad++;
+        //     if (age>=8 && age<=19)ch++;
+        //     if (age>=1 && age<=7)ah++;
+        //     if (age==0){
+        //     $("#result").html(`노인 : 65세 이상<br>성인 : 20세~64세<br>청소년 : 8세~19세<br>아동:1세~7세<br><br>총원 ${no+ad+ch+ah}명: 노인 ${no}명 성인 ${ad}명 청소년 ${ch}명 아동 ${ah}명`);
+        //                 break;}
+        // }
+
+        var old=0, adult=0, teen=0, child=0, count=0;
+
+        var end=true; //구성원나이를 입력가능 또는 입력 불가능하게 만들기위한 변수;
+            if(end){
+        function survey(){
+            var age = Number($("#age").val()); // input  .val()
+            if(age>=65) old++;
+            else if(age>=20 && age<=64) adult++;
+            else if(age>=8 && age<=19) teen++;
+            else if(age>=1 && age<=7)child++;
+            else if(age==0){
+            count--;
+            end=false;
+            }
+            
+            count++;
+            $("#result").html(`
+            총원 ${count} : 노인${old}명, 성인 ${adult}명, 청소년${teen}명, 아동${child}명
+            `);
+            }
+            }
+        
+
+    // linter 도구 자바스크립트
+    // jshint
+    // eslint
+    // prettier
+
+        
+        
     </script>
 </head>
 <body>
-    
+    <input type="number" id="age" min="0" max="110">
+    <button onclick="survey()">입력</button>
+    <div id = "result"></div>
 </body>
 </html>
