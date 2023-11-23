@@ -146,7 +146,7 @@ $(function(){  //처음 첫번째 사람 이름이 뜨는
     $("#member").text(member[idx]); //?
 })
 function save(){
-height.push(Number($("#height").val()));
+height.push(Number($("#height").val())); // html 데이터-> javascript 데이터
 total += height[idx];
 if(idx==member.length-1){
    var avg = total/member.length;
