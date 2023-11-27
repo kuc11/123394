@@ -1,0 +1,86 @@
+<!--html_form.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--  form 데이터 전송을 위한 태그
+    form 속성 
+        이름지어주기 - id, class, name
+        꼭 넣어야할것) method- 전송하는방법
+                            get : 데이터를 있는 그대로 서버에 전달(데이터 노출) 장점: 속도는 빠름
+                            post: 데이터를 변환하여 서버에 전달(압축, 암호화)
+                      action- 데이터 전송할 곳 지정
+                      enctype - 데이터 형식 지정 (이미지, 동영상, 음악 등등) (넣어도 되고 안해도 되고)
+                              :multipart/form-data
+                      데이터가 입력, 선택된 태그에 반드시 name이 존재해야 전송가능
+                      value: sever에 전송할 값
+    -->
+
+    <form method="get" action="login_check.jsp">
+        <input type="text" name="text1" placeholder="이름입력"> <br>
+        <input type="password" name="pass"> <br>
+        <input type="number" name="age" min="1" max="10"> <br>
+        <input type="color" name="mycolor"> <br>
+        <input type="date" name="today" value="2023-11-20" min="2023-01-01" max="2023-11-20"> <br>
+        <input type="month" name="todayMonth"> <br>
+        <input type="datetime-local" name="todaytime"> <br>
+        <input type="email" name="email" required> <br>
+        <input type="image" name="myimg"  src="https://loremflickr.com/50/50"> <br>
+        <!-- 이미지로 전송버튼을 구성  / 이미지를 전송하는 것이 아닌-->
+        <input type="button" value="가입"> <!--버튼을 눌러도 아무기능안함-->
+        <input type="submit" value="전송">
+        <input type="reset" value="작성취소">
+        <input type="time" name="time"> <br>
+        <input type="week" name="thisweek"> <br>
+        <input type="tel" name="mytel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"> <br> <!--전화번호 입력-->
+        <input type="url" name="nowurl"> <br>
+        <input type="range" name="width" min="100" max="200" step="10"> <br>
+        <input type="checkbox" name="interest" value="축구">축구
+        <input type="checkbox" name="interest" value="게임">게임
+        <input type="checkbox" name="interest" value="영화">영화
+        <!--checkbox는 여러데이터를 그룹화 하여 사용하는 input태그이다.
+            반드시 그룹으로 묶어 주기위해서는 name이 같아야한다-->
+        <input type="radio" name="gender" value="남">남자
+        <input type="radio" name="gender" value="여">여자
+        <!--radio는 여러 데이터중 단일선택-->
+        <input type="file" name="youimg">
+        <!--이미지,동영상,음악등을 등록할때 사용-->
+        <input type="hidden" name="ids" value="1"> <br>
+            
+        <textarea nmae="memo"></textarea>   <br>
+        <select name="game" multiple>
+            <option value="lol">리그오브레전드</option>
+            <option value="gta">gta</option>
+            <option value="fifa">피파온라인</option>
+        </select>
+        <input list="lang">
+        <datalist id="lang" name="language">
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="javascript">javascript</option>
+        </datalist>
+    </form>
+    <form oninput="res.value = parseInt(a.value) + parseInt(b.value)">
+        <input type="number" id="a" name="a"> +
+        <input type="number" id="b" name="b"> =
+        <output name="res" for="a b"></output>
+    </form>
+
+    </form>
+</body>
+</html>
+
+
+<!--
+        월 - html form - style.,javascript로 값 가져오는법
+        화 - css animation
+        수 - mediaquery,grid
+        목 - javascript - function
+        금 - javascript - function
+    -->

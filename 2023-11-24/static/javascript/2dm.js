@@ -23,7 +23,7 @@ $(function(){
         }
          board.push(tmp);  // 배열수가 8개인 8개의 배열을 board에 저장
     }
-    
+    console.log(board.length);
     
     for( var i=0; i< board.length; i++){
         for( var k=0; k< board[i].length; k++){
@@ -35,7 +35,7 @@ $(function(){
         }
        
     }
-
+    console.log($(".pic"));
 //     $(".pic").on("click",function(){
 //         $(this).find("img").show();
 
