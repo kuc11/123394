@@ -36,17 +36,17 @@ $(function(){
         //     var count4 =0;
         //     for(var k=0;k<5;k++){
                 
-        //         if(board[i*5+k] == 0)
-        //             count1++;
-        //         if(board[k*5+i] == 0)
-        //             count2++;
-        //         if(i==4){
-        //             if(board[k*6] == 0)
-        //             count3++;
-        //             if(board[(k+1)*4] == 0)
-        //             count4++;
-        //             console.log(count4);
-        //             }
+                if(board[i*5+k] == 0)
+                    count1++;
+                if(board[k*5+i] == 0)
+                    count2++;
+                if(i==4){
+                    if(board[k*6] == 0)
+                    count3++;
+                    if(board[(k+1)*4] == 0)
+                    count4++;
+                    console.log(count4);
+                    }
                 
         //         if(count1==5)
         //             bingo++;
