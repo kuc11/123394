@@ -87,13 +87,14 @@ function endgame(){
         row=0; //한줄씩 확인 할 때 마다 0개부터 확인해야하므로 초기화
         col=0;  //1열씩 확인 할 때 마다 0개부터 확인해야하므로 초기화
     }
+    console.log(end);
     if(end==5){//5줄 빙공 완성
         $("#result_modal").show(); //display:none 처리된거를 풀어준다. $(#"result_modal").css("display","block")
         $(".result").text("5줄 빙고 완성");
 
       
     }else if(end>=6){// 빙고 실패
-        $("#result_madal").show();
+        $("#result_modal").show();
         $(".result").text("빙고실패");
 
     }
