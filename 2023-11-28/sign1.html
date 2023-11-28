@@ -1,17 +1,16 @@
-<!--sign.html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
    
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="./static/javascript/sign.js"></script>
-    <link rel="stylesheet" href="./static/css/main.css">
-    <link rel="stylesheet" href="./static/css/sign.css">
+    <!-- <script src="./static/javascript/sign.js"></script> -->
+    <link rel="stylesheet" href="./static/css/main1.css">
+    <link rel="stylesheet" href="./static/css/sign1.css">
 </head>
 <body>
     <div id="wrap">
@@ -55,8 +54,7 @@
                     </div>
                     <div class="input_field">
                         <label for="myphone">연락처</label>
-                        <input type="tel" name="myphone" id="myphone"pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}"  > 
-                        
+                        <input type="tel" name="myphone" id="myphone" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}">
                     </div>
                 </fieldset>
 
@@ -79,7 +77,6 @@
                     <div class="select_input">
                         <label for="ability">능력</label>
                         <div class="ability_check">
-                            <input type="checkbox" name="all" id="all">전부체크
                             <span><input type="checkbox" name="ability" class="ability_list" value="인쇄물">인쇄물</span>       <!--checkbox 에 value 값과 입력한 결과물은 따로-->
                             <span><input type="checkbox" name="ability" class="ability_list" value="앱">앱</span>
                             <span><input type="checkbox" name="ability" class="ability_list" value="제품디자인">제품디자인</span>
@@ -103,7 +100,7 @@
                         <span class="arrow"><i class="bi bi-arrow-down-short"></i></span>
                     </div>
 
-                    <input type="file" name="myface" id="myface" accept="image/png*">     <!--html 로 확장자를 정하는것에는 한계가 있어 javascript 로 한번더 검증을 해야한다-->
+                    <input type="file" name="myface" id="myface">
 
                 </fieldset>
                 <button type="button" id="before">이전</button>

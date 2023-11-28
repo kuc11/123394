@@ -1,0 +1,14 @@
+#signWrap{
+    width:600px;
+    margin:0 auto;
+}
+.pageTitle{
+    text-align:center;
+    padding:20px 0;
+}
+.sign_essential{
+    width:100%;
+    font-size:20px;
+    border-radius:10px;
+    padding:20px;
+}
