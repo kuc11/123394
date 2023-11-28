@@ -43,7 +43,7 @@ $(function(){
                     count3++;
                     if(board[(k+1)*4] == 0)
                     count4++;
-                    console.log(count4);
+                    console.log(count4);  
                     }
                 
                 if(count1==5)
