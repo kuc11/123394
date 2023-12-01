@@ -1,0 +1,54 @@
+#searchWrap{
+    width:1200px;
+    margin:0 auto;
+    padding:10px 0;
+}
+#searchWrap .search{
+    width:600px;
+    margin:0 auto;
+    border-bottom:1px solid #bbb;
+}
+
+#searchWord{
+    width:90%;
+}
+#searchWord + label{
+    display:inline-block;
+    width:8%;
+    text-align: center;
+}
+
+#slideWrap{
+    width:100%;
+    background:var(--box-color);
+    height:500px;
+}
+#slideBox{
+    width:1200px;
+    margin:0 auto;
+    position:relative;
+}
+#slideBox .slide{
+    width:100%;
+    height:500px;
+    position:relative;
+    overflow:hidden;
+}
+
+#main{
+    width:1200px;
+}
+
+#slideBox .leftBt{
+    position:absolute;
+    top:50%;
+    left:10px;
+    font-size:var(--title-size)
+}
+
+#slideBox .rightBt{
+    position:absolute;
+    top:50%;
+    right: 10px;
+    font-size:var(--title-size)
+}
