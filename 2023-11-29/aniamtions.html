@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        img{
+            height:100%;
+        }
+
+        #box{
+            width:30px; height:30px;
+            overflow: hidden;
+            border-radius:100%;
+            position:absolute;
+            transform:translate(-50%,-50%);
+            top:0; left:50%;
+            animation:shi 5s infinite alternate;
+
+        }
+        @keyframes shi{
+            0%{width:30px; height:30px; top:0;}
+            100%{width:1000px; height:1000px; border-radius:0%; top:50%; ;}
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <img src="./static/images/siba.jpg" alt="이미지">
+    </div>
+    
+</body>
+</html>
