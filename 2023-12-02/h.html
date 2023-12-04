@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+    // 66.01
+    // 84.87
+    function nomal(){
+        var nomal1= 70-(70/100)*5.7;
+        var nomal2= 90-(90/100)*5.7
+        console.log(nomal1);
+        console.log(nomal2);
+    }
+    nomal();
+    function BMI(){
+        var a = $("#height").val()/100;
+        var b = $("#weight").val()
+        var bmi = b/(a*a);
+        var result = wei(bmi);
+       $("#total").append(`${result} <br>`);
+    }
+    function wei(bm){
+        var res=' ';
+        if(bm<=18.5)
+            res="저체중";
+        else if(bm<=22.9)
+            res="정상";
+        else 
+            res="과체중"
+        return (res);
+    }
+
+</script>
+</head>
+<body>
+    공복혈당<input type="text" id="a">
+    식후 혈당<input type="text" id="b">
+    <button onclick=""></button>
+    <br><br>
+
+
+    몸무게<input type="text" id="weight">
+    신장  <input type="text" id="height">
+    <button onclick="BMI()">결과</button>
+    <div id="total"></div>
+
+</body>
+</html>
+<!--
+    민수가 혈당을 체크하였다.
+        혈당수치에 따라 구분하여 출력하시오
+        70~100 일경우 공복 혈당
+        90~140 일경우간 식후 2시 혈당
+        정상혈당 수치는 70~100, 90~140 이다. 정상수치보다 5.7%미만이면
+        당화혈색소 라고 출력
+        input 태그 값 가져오는 함수, 수치에 따라 결과 출력하는 함수
+
+    종우가 비만도 측정을 하였다.
+        비단도 BMI지수 계산은 몸무게/((키/100)*(키/100))
+        BMI 지수가 18.5 이하면 저체중
+        18.5 ~22.9 사이면 정상
+        23.0 ~ 24.9 사이면 과체중
+        25이상은 비만
+-->

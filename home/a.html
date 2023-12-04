@@ -4,8 +4,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width , initial-scale=1.0">
         <title>Document</title>
-        <script src="./static/javascirpt/a.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+        <style>
+            #wrap{
+                width:30px; height:30px;
+                overflow:hidden;
+                border-radius:40%;
+                transform : translateX(-50%);
+                position:absolute;
+                top:0; left:50%;
+                animation : shi 5s infinite alternate;
+            }
+            #wrap img{
+                height:100%;
+ 
+               
+            }
+            @keyframes shi{
+                0%{width:30px }
+                100%{width:1000px; height:1000px; border-radius:0; top:50%; translate: translate(-50%,-50%)}
+            }
+
+
+        </style>
     </head>
     <body>
+        <div id="wrap">
+            <img src="./static/images/shiba.jpg" alt="이미지">
+        </div>
     </body>
 </html>
