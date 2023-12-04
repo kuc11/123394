@@ -39,7 +39,7 @@
     width:1200px;
 }
 
-#slideBox .leftBt{
+#slieBox {
     position:absolute;
     top:50%;
     left:10px;
@@ -52,3 +52,4 @@
     right: 10px;
     font-size:var(--title-size)
 }
+#a{width:100px;}
