@@ -5,33 +5,26 @@
         <meta name="viewport" content="width=device-width , initial-scale=1.0">
         <title>Document</title>
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-        <style>
-            #wrap{
-                width:30px; height:30px;
-                overflow:hidden;
-                border-radius:40%;
-                transform : translateX(-50%);
-                position:absolute;
-                top:0; left:50%;
-                animation : shi 5s infinite alternate;
-            }
-            #wrap img{
-                height:100%;
- 
-               
-            }
-            @keyframes shi{
-                0%{width:30px }
-                100%{width:1000px; height:1000px; border-radius:0; top:50%; translate: translate(-50%,-50%)}
-            }
-
-
-        </style>
+        <script>
+    function avg(){
+    var k = parseInt(document.getElementById("num1").value); // javascript
+    var m = parseInt($("#num2").val());                      //jquery
+    var e = parseInt(document.getElementById("num3").value);
+    var tot= total(k,m,e);
+    
+    var average= tot/3;
+    document.getElementById("sung").innerHTML= average;
+    }
+    function total(a,b,c){
+    return(a+b+c);
+    }
+        </script>
     </head>
     <body>
-        <div id="wrap">
-            <img src="./static/images/shiba.jpg" alt="이미지">
-        </div>
+        <input type="text" id="num1" >
+        <input type="text" id="num2" >
+        <input type="text" id="num3" >
+        <button onclick="avg()"> 성적 평균 계산</button>
+        <div id="sung"></div>
     </body>
 </html>
