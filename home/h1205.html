@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        
+        let image = ["rock.jpg", "scissors.jpg","paper.jpg"];
+        let a = 0;
+
+        var interval = setInterval(callback, 300);
+        function callback(){
+            a = Math.floor(Math.random()*3);
+            $("#com").find("img").attr("src","./static/images/"+image[a]) ;
+            let result = $("#rock").on("click",function() {rok(a)});
+
+                
+            $("#res").append(result);
+        }
+        
+   
+        function rok(r){
+            clearInterval(interval);
+            if(r==0) return "drop";
+            else if(r==1) return "win";
+            else return "lose";
+        }
+        function sci(){
+
+        }
+        function pap(){
+
+        }
+    
+ 
+    </script>
+</head>
+<body>
+    <div id="com"><img src="" alt="이미지">   </div>
+    <div id="rock" onclick="rok()"><img src="static/images/rock.jpg" alt="이미지"></div>
+    <div id="scissors" onclick=""><img src="static/images/scissors.jpg" alt="이미지"></div>
+    <div id="paper" onclick=""><img src="static/images/paper.jpg" alt="이미지"></div>
+    <div id="res"></div>
+
+
+</body>
+</html>
