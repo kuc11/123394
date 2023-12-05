@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function(){ //모든요소에 조건을 주기위해
+            $(".house").on("dblclick", update);
+        
+        });
+        // javascript - innnerHTML , jquery- html()
+        // innerHTML = "<input>" , html("<input>")
+        // innerHTML 과 html() 은 덮어쓰기 형태로 추가한다.( 기존의 내용삭제)
+
+        // a 라는 함수의 변수 값을 b라는 함수에서 사용하려면
+        // b 함수의 매개변수를 통해 전달하거나.
+        // 전역변수를 통해 사용가능하게 한다.
+        
+        // on("이벤트명", 이벤트발생시 실행할 함수);
+        // 이벤트 발생시 함수는 익명함수(function(){}) 이거나 함수명만 작성 매개변수를 넣은 상태로는 안된다.
+        // 혹은 익명함수에 함수명과 매개변수를 넣거나
+        // 익명함수는 함수를 정의하는 것
+        // 함수명() 은 함수를 실행시키라는것
+        //수정전 function update(){
+        //     var td = $(this); //클릭한 td 태그
+        //     var td_text = td.text(); //클릭한 td 태그안의 텍스트
+        //     td.html(`<input type=text value='${td_text}'>
+        //              <button class='modify'>수정</button>` ); //태그에 형태로 변환
+        //     $(".modify").on("click",function(){
+        //         save(td);
+        //     });
+        //     td.removeClass("house");  //removeClass(삭제 할 클래스명) 
+        //     td.addClass("change"); //adClass(추가 할 클래스명)
+        // }
+        // input type 이 날짜 또는 시간 형식일 경우에
+        // value 값은 형태가 2023-12-01 11:09 형식이다.
+        // 즉 input type=date value='2023-12-01'이 되어야 한다.
+        function update(){
+            var td = $(this); //클릭한 td 태그
+
+            var bt = "<button class='motify'>수정</button>"
+            var htmlTag=makeHtml(td);
+            
+            td.html(htmlTag + bt);
+            $(".modify").on("click",function(){
+                save(td);
+            });
+        }
+        function makeHtml(td){
+            var td_text = td.text(); //클릭한 td 태그안의 텍스트
+            var type="text";
+
+            if(td.hasClass("payment")){
+                let pay =["카카오체크카드","국민체크카드","현대카드","우리체크카드"];
+
+                htmlTag=`<select id='pay'>`;
+                for(var card of pay){
+                    htmlTag += `<option value='${card}'${td_text===card? 'selected':''}>${card}></option>`;
+                }
+                htmlTag += `</select>`;
+            }else{
+            if(td.hasClass("date")) {
+                // 12.1 -> 12 1 -> 2023+ 12 + 1 -> 2023-12-01
+                type ="date";
+                td_text = changeDate(td_text);
+                }
+                htmlTag = `<input type= '${type}' value='${td_text}'>`;
+                return htmlTag;
+            }
+        }
+        // 내용이 복잡해지는 경우 분할하여 코드가 한곳에 집중 되는것을 방지한다.
+        // 코드가 한곳에 집중되어 작성되면 개발자 입장에서 코드를 파악하기 힘들다.
+        // 코드를 정리하여 작성하는 것 개발자가 가져야할 습관중 하나이다.
+        function changeDate(date){
+            // td_text ="2023-"+td_text.split(".")[0] +"-"+td_text.split(".")[1];
+            if(date.includes("-")){ //2023-12-01  , 12.1
+                return Number( date.split("-")[1])+"."+Number(date.split("-")[2]);
+            }
+
+            let month = digits(date.split(".")[0]);
+            let day = digits(date.split(".")[1]);
+            return "2023-"+month+"-"+day;
+        }
+        // 중복적으로 코드가 사용되는 경우 함수로 구현한다.
+        function digits(num){
+            if(num.lenth==1)
+                num = "0"+num;
+                return num;
+        }
+
+
+        function save(t){// 수정버튼 클릭이벤트 등록시 td를 t변수로 전달받음
+            //select 태그의 선택한 옵션이 td의 text로 저장될 수 있게 만들기
+            var tag = t.hasClass("payment") ? "select" : "input";
+            var text = t.children("input").val(); // input 태그에 작성된 텍스트
+            if( t.hasClass("date")){
+            //    text= Number(text.split("-")[1])+"."+Number(text.split("-")[2]);
+            text=changeDate(text);
+            }
+            t.text(text);
+            // t.on("click",update); // off 를 on 으로 바꿀때 그냥 click 만 적는게 아니라 어떤 함수를 실행 시킬것인지를 적어야한다. 
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <table>
+            <thead>
+              <tr>
+                <th>일</th>
+                <th>내역</th>
+                <th>지출</th>
+                <th>결제방법</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="house date">12.1</td>
+                    <td class="house detail">편의점(과자)</td>
+                    <td class="house expense">1800</td>
+                    <td class="house payment">카카오체크카드</td>
+                </tr>
+                <tr>
+                    <td class="house date">12.2</td>
+                    <td class="house detail">교통대금</td>
+                    <td class="house expense">1250</td>
+                    <td class="house payment">국민체크카드</td>
+                </tr>
+                <tr>
+                    <td class="house date">12.3</td>
+                    <td class="house detail">카카오T(택시)</td>
+                    <td class="house expense">7900</td>
+                    <td class="house payment">국민체크카드</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

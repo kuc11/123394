@@ -8,19 +8,35 @@
 <script>
     // 66.01
     // 84.87
-    function nomal(){
-        var nomal1= 70-(70/100)*5.7;
-        var nomal2= 90-(90/100)*5.7
-        console.log(nomal1);
-        console.log(nomal2);
+    // function nomal(){
+    //     var nomal1= 70-(70/100)*5.7;
+    //     var nomal2= 90-(90/100)*5.7
+    //     console.log(nomal1);
+    //     console.log(nomal2);
+    // }
+    function sugar(){
+        var v = getBlood();
+        var out = "정상혈당"
+        if( 70<=v && v<=100)
+            out +=" 공복혈당";
+        if(90<=v && v<=140)
+            out +=" 식후 2시간 혈당";
+
+        if(66.1 > v)
+            out = "당화혈색소";
+        $("#resblood").append(`${out}`);
     }
-    nomal();
+     function getBlood(){
+        var v = Number ($("#bl").val());
+        return v;
+    }
+
     function BMI(){
         var a = $("#height").val()/100;
-        var b = $("#weight").val()
+        var b = $("#weight").val();
         var bmi = b/(a*a);
-        var result = wei(bmi);
-       $("#total").append(`${result} <br>`);
+        wei(bmi);
+       
     }
     function wei(bm){
         var res=' ';
@@ -30,20 +46,24 @@
             res="정상";
         else 
             res="과체중"
-        return (res);
+        $("#total").append(`${res} <br>`);
     }
 
 </script>
 </head>
 <body>
-    공복혈당<input type="text" id="a">
+    <!-- 공복혈당<input type="text" id="a">
     식후 혈당<input type="text" id="b">
     <button onclick=""></button>
-    <br><br>
+    <br><br> -->
+        <input type="text" id="bl">
+        <button onclick="sugar()">혈당수치입력</button>
+        <div id="resblood"></div>
 
+        <br><br>
 
-    몸무게<input type="text" id="weight">
-    신장  <input type="text" id="height">
+    몸무게<input type="text" id="weight" placeholder="몸무게">
+    신장  <input type="text" id="height" placeholder="키">
     <button onclick="BMI()">결과</button>
     <div id="total"></div>
 
