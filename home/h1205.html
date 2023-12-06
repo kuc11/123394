@@ -16,25 +16,39 @@
         function callback(){
             a = Math.floor(Math.random()*3);
             $("#com").find("img").attr("src","./static/images/"+image[a]) ;
-            let result = $("#rock").on("click",function() {rok(a)});
-
+            $("#rock").on("click",function() {rok(a)});
+            $("#scissors").on("click",function() {sci(a)});
+            $("#paper").on("click",function() {pap(a)});
                 
-            $("#res").append(result);
+            
         }
         
    
         function rok(r){
+            var re='';
             clearInterval(interval);
-            if(r==0) return "drop";
-            else if(r==1) return "win";
-            else return "lose";
+            if(r==0) re="drop";
+            else if(r==1) re="win";
+            else   re="lose";
+            $("#res").html(`${re}`);
         }
-        function sci(){
+        function sci(s){
+            var re='';
+            clearInterval(interval);
+            if(s==0) re="lose";
+            else if(s==1) re="drop";
+            else   re="win";
+            $("#res").html(`${re}`);
+        }
+        function pap(p){
+            var re='';
+            clearInterval(interval);
+            if(p==0) re="win";
+            else if(p==1) re="lose";
+            else   re="drop";
+            $("#res").html(`${re}`);
+        }
 
-        }
-        function pap(){
-
-        }
     
  
     </script>
@@ -42,8 +56,8 @@
 <body>
     <div id="com"><img src="" alt="이미지">   </div>
     <div id="rock" onclick="rok()"><img src="static/images/rock.jpg" alt="이미지"></div>
-    <div id="scissors" onclick=""><img src="static/images/scissors.jpg" alt="이미지"></div>
-    <div id="paper" onclick=""><img src="static/images/paper.jpg" alt="이미지"></div>
+    <div id="scissors" onclick="sci()"><img src="static/images/scissors.jpg" alt="이미지"></div>
+    <div id="paper" onclick="pap()"><img src="static/images/paper.jpg" alt="이미지"></div>
     <div id="res"></div>
 
 
