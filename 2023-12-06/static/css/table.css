@@ -24,4 +24,14 @@
     margin-top: 20px;
     padding-top: 30px;
     border-top:1px solid gray;
+    display:flex;
+    justify-content: center;
+
+}
+#draw table{
+    border-collapse: collapse;
+}
+
+#draw table tr td{
+    border:1px solid black;
 }
