@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 객체 생성밥법과, 객체에 함수(메서드)를 정의, 실행 하는방법
+        // 객체를 사용하는 이유는 데이터를 체계적으로 관리하기위해
+        // 많은양의 데이터를 다룰때 각각의 데이터들의 명칭을 지정해주면
+        // 데이터 찾기, 데이터 저장, 데이터 가공 하기가 개발자 입장에서 보다 편하다.
+        // 도서관에 책들이 아무렇게 비치 되어있으면 책을 찾는 입자에서
+        // 도서관 전체를 돌아다니면 찾아야 하지만, 도서를 분류하고, 그 안에서 가나다순으로 
+        // 비치하면 책을 찾는 사람은 보다 쉽게 찾을 수 있다.
+        // 데이터도 정리하여 저장 되도록 하느게 개발자입장에서 다루기 수월해진다.
+
+        // 자바스크립트 객체를 생성하는 방법
+        // 객체는  key:value 1:1로 저장     , 하나의 객체 안에서 key는 중복X , key 를  변수라고 생각할 것   , key 는 한글로도 표현가능
+
+        // 1.
+        var animal = {}; //   var animal = new Object()           객체는 중괄호{} 로 표현
+        animal.kind = '강아지';     // kind 가 key 이고 강아지가 value
+        animal.age = 4; 
+
+
+        var animal1 = {
+            종:'토끼',
+            age:3
+        };
+
+        animal1.먹이='풀';      //key 와 value 를 추가로 객체에 넣을 수 있다.
+
+        // function 을 이용한 객체 생성
+        function dog(품종,크기,특징){         //객체 생성자 함수
+            this.품종=품종;
+            this.크기=크기;
+            this.특징=특징;
+            
+        }
+        console.log(dog.prototype);
+        dog.prototype.view=function(){
+            document.write(this.품종+" "+this.크기+" "+this.특징);
+        }
+        dog.prototype.종="개";
+        // prototype 은 자바스크립트에서 기존의 객체에 새로운 객체를 생성할 때 사용된다.
+        // dog 라는 객체를 복사하여 prototype 에 넣어주고 prototype을 통해 메서드를 연결하여
+        //  다시 dog 객체에 저장하는 방식으로 동작한다.
+        // 생성자 함수 혹은 그냥 함수를 처음 만들게 되면은 안이 비어있는 prototype:원형 이란게 만들어진다.
+        // prototype 속성은 생성된 함수의 프로토타입 객체를 참조
+
+
+        // Array.prototype.indexOf
+
+        // new Array().indexOf
+        // 생성자 함수에 익명함수를 작성할 시 객체가 생성될때마다 생성자 함수안에 있는
+        // key, value 들이 메모리에 생성된다.. 즉 모든 객체가 같은 내용을 가지는
+        // 익명함수가 여러번 생성된다.
+        // java 객체지향  javascript 
+
+
+        var d1 = new dog("말티즈","소형","장난끼");     // 생성자 함수를 통해 객체생성
+        var d2 = new dog("먹푸들","중형","똑똑이");
+        var d3 = new dog("진돗개","중형","순종");
+        // alert( d1.품종 );     // 연산자 순위     () , []  , . , ->
+        // alert( d1['크기']); 
+        d1.view();
+        console.log(d1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
