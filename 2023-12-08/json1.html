@@ -1,0 +1,93 @@
+<!-- json1.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    
+    <script>
+        // function 출력(std){
+        //     var out="";
+        //     var view = document.getElementById("view");
+
+        //     for(var i in std){          //for~in 은 배열의 인덱스를 변수 i에 저장한다.
+        //         out += `<div> 이름:${std[i].name}, 나이:${std[i].age}</div>`;
+        //     }
+
+        //     view.innerHTML = out;
+        // }
+        // var xmlHttp = new XMLHttpRequest();
+        // xmlHttp.onload = function(){                // 외부파일 열기 성공시 실행되는 함수
+        //       var student = JSON.parse( this.responseText ); 
+
+        //         출력(student);
+
+        //     //   console.log(student);
+
+        //     //   document.getElementById("name").innerText= student[0].name;
+        //     //   document.getElementById("age").innerText= student[0].age;
+              
+              
+        //     //  alert(  student.name );
+        //     // alert(this.responseText);            //this - xmlHttp
+        // }
+
+
+        // xmlHttp.open("GET","./data/student.json"); //외부파일 열기 , open(전송방식, 주소)
+        // //  전송방식 - GET,POST
+        // //  주소 - 웹 주소 또는 로컬파일경로
+        // xmlHttp.send();
+        
+        //    var  xmlHttp = new XMLHttpRequest()
+        //    xmlHttp.onload = function(){
+        //     var gm = JSON.parse(this.responseText);         // JSON.parse() - json 문자열값을 객체로변환
+            
+        //     // document.getElementById("name").innerText="캐릭터명:"+gm.name;
+        //     // document.getElementById("status1").innerText=`힘:${gm.힘}민첨:${gm.민첩}생명:${gm.생명}지능:${gm.지능}`;
+        //     // document.getElementById("status2").innerText=`hp:${gm.hp} mp:${gm.mp}`;
+        //     document.getElementById("view").innerHTML=`
+        //     <div> 캐릭터명 : ${gm.name} </div>
+        //     <div> 힘 : ${gm.힘} 민첩 : ${gm.민첩} 생명 : ${gm.생명} 지능 : ${gm.지능} </div>
+        //     <div> hp : ${gm.hp} mp : ${gm.mp} </div>
+        //     `
+        //     }
+           
+        //    xmlHttp.open("GET","./data/game.json");
+
+        //     xmlHttp.send();
+
+
+        // var xml = new XMLHttpRequest();
+        // xml.onload=function(){
+        //     var data = JSON.parse(this.responseText);
+        //     document.write( data.name+"  "+data.취미);
+        // }
+        // xml.open("GET", "http://krdrive.ipdisk.co.kr:8000/test/aaa.php");
+        // xml.send();
+
+        // jquery
+        $.getJSON( "./data/game.json"  , function(data){                // json에 내용이 매개변수 data에
+                show(data);
+        });
+        function show(data){
+            $("#view").html(`<h3> ${data.name}</h3>`);
+        }
+    </script>
+
+
+
+</head>
+<body>
+    <div id="view">
+        <div id="name"></div>
+        <div id="status1"></div>
+        <div id="status2"></div>
+    </div>
+</body>
+</html>
+<!--
+    json - javascript Object Nation
+-->
