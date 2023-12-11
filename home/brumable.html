@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin:0; padding:auto 0;
+            box-sizing:border-box;
+        }
         table{
             border-collapse:collapse;
         }
@@ -13,70 +17,90 @@
             width:100px; height:100px;
            border:1px solid #000;
         }
+        .event{
+            width:200px; height:200px;
+        }
+        .up , .down{
+            width:150px; height:200px;
+        }
+
+        .left , .right{
+            width:200px; height:150px;
+        }
+        .event img{
+            width:100%; height:100%;
+        }
     </style>
 </head>
 <body>
     <table>
         <tr>
-            <td><div>대전</div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="event one"></td>
+            <td class="up"></td>
+            <td class="up"></td>
+            <td class="up"></td>
+            <td class="up"></td>
+            <td class="up"></td>
+            <td class="event two"></td>
         </tr>
         <tr>
-            <td></td>
+            <td class="left"></td>
             <td rowspan="5" colspan="5"></td>
 
-            <td></td>
+            <td class="right"></td>
         </tr>
         <tr>
-            <td></td>
+            <td class="left"></td>
            
 
 
 
 
-            <td></td>
+            <td class="right"></td>
         </tr>
         <tr>
-            <td></td>
+            <td class="left"></td>
             
             
 
 
  
-            <td></td>
+            <td class="right"></td>
         </tr>
         <tr>
-            <td></td>
+            <td class="left"></td>
             
           
 
 
 
-            <td></td>
+            <td class="right"></td>
         </tr>
         <tr>
-            <td></td>
+            <td class="left"></td>
             
       
 
 
 
-            <td></td>
+            <td class="right"></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="event three"><img src="./static/images/무인도2.png" alt="이미지"></td>
+            <td class="down"></td>
+            <td class="down"></td>
+            <td class="down"></td>
+            <td class="down"></td>
+            <td class="down"></td>
+            <td class="event four"></td>
         </tr>
     </table>
 </body>
 </html>
+맵 만들어오기
+가로 7칸, 세로 7칸  의 정사각형
+
+바로바로
+대한민국과 일본 도시 이름으로 칸을 채워 오세요
+
+각면 마다 서로 다른색을 주세요
