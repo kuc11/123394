@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // book.html 에 입력한것을 받아온다.
+        window.onload=function(){    
+            var query = location.search;        // ? 뒤에서부터
+            var url = location.href;
+
+            query = query.substring(1);         // 0번 인덱스는 빼고 1번부터 가져와라
+
+            console.log(query);
+            console.log(url);
+            document.getElementById (query);
+        }
+    </script>
+</head>
+<body>
+    <div id="list"></div>
+</body>
+</html>

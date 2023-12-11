@@ -1,0 +1,62 @@
+<!-- navigator.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // navigator - 브라우저의 정보를 담고 있다.
+        // userAgent - 브라우저의 이름, 버전, 플랫폼
+
+       var agent = navigator.userAgent;
+       alert( agent);
+        
+       if( agent.toLowerCase().includes("windows")){
+        alert("윈도우 pc로 접속 하였습니다.")
+            //윈도우용 페이지 이동
+        }else if(agent.toLowerCase().includes("android")){
+            alert("안드로이드 모바일 접속")
+            // 모바일용 페이지 이동
+        }else if(agent.toLowerCase().includes("ipad")){
+            alert("ipad로 접속")
+        }else if(agent.toLowerCase().includes("iphone")){
+            alert("아이폰 접속")
+        }
+
+        // // 접속 위치 정보
+        // navigator.geolocation.getCurrentPosition( show );       //() 안에 함수가 들어가야함
+
+        // // 지속적으로 사용자위치를 요청 - watchPosition();
+
+        // function show(position){
+        //     alert( position.coords.latitude+"  "+position.coords.longitude);
+        // }
+
+        function getmap(){
+
+            var image = documnet.createElement("img");
+            navigator.geolocation.getCurrentPosition(setMap);
+            return image;
+
+            function setMap(pos){
+                var latitude = pos.coords.latitude;
+                var longitude = pos.coords.longitude;
+
+                var accuracy = pos.coords.accuracy; // 미터 단위 정확도
+
+                // 구글지도에 대한 정적 이미지
+                var url = "http://maps.google.com/maps/api/staticmap"+
+                            "?center="+latitude+","+longitude+
+                            "&size=640x640&sensor=true";
+
+                image.src=url; 
+            }
+        }
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
