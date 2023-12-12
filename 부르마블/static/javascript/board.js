@@ -42,7 +42,7 @@ function player(num, color){
     this.num=num;
     this.color=color;
     this.money=100;         // 초기 게임머니 100만원
-    this.zone-new Array();  // 매임 한 토지를 배열로 저장
+    this.zone=new Array();  // 매임 한 토지를 배열로 저장
     this.drift_turn=0;      // 무인도 남은 턴
     this.location=0;        // 현재위치
 }
@@ -51,7 +51,9 @@ function player(num, color){
 let fund = 0;               // 사회복지기금 모금 금액 저장 변수
 let island_ = new Array();  // 무인도에 도착한 플레이어
 let zone = new Array();     // 각 구역의 개체 저장 배열
+let player_list = new Array(); // 게임참가자
 
+// 함수정의
 function zone_create(){
     for(var i=0;i<zone_name.length; i++ ){
         var color = zone_color[0];
@@ -90,8 +92,36 @@ function zone_draw(){
         }
     });
 }
+function game_init(){
+    var pc = Number($("#player_number").val());
 
+    $("#game_state").html("<h3>게임현황</h3>");
+
+    for(var i=1; i<=pc; i++){
+        player_list.push( new player(i,"#ff0000"));
+        $("#game_state").append(
+            `<div class='ps'>
+                <b class='pump'>${i}</b>
+                <input type='color' id='pcl${i}'>
+                <div class='state'>
+                    자금 : <b id='pm${i}'>${player_list[i-1].money}만원</b>
+                    보유도시 : <b id='pcity${i}'>${player_list[i-1].zone.length}개</b>
+                </div>
+            </div>`
+        );
+    }
+    $("#game_state").show();
+    $("#set_player").hide();
+}
 $(function(){
     zone_create();
     zone_draw();
+
+    $("#enroll").on("click", game_init);
+    $("#player_number").on("change",function(){
+        $(this).next().text($(this).val() + "명");
+    });
+    $("#player_number + label").text(2+"명");
+
+    $("input[type=color]").on("change",change_pcl);
 });

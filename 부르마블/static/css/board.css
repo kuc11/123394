@@ -112,4 +112,12 @@
 }
 .pn input[type=range]::-webkit-slider-runnable-track{
     background:blue;
+    border-radius: 20px;
+
+}
+
+#enroll{
+    float:right;
+    font-size:20px;
+    padding:3px 10px;
 }
