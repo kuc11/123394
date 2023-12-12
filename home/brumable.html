@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         *{
-            margin:0; padding:auto 0;
+            margin:0; padding:0 auto;
             box-sizing:border-box;
         }
         table{
@@ -14,85 +14,96 @@
         }
  
         td{
-            width:100px; height:100px;
            border:1px solid #000;
         }
         .event{
             width:200px; height:200px;
         }
-        .up , .down{
-            width:150px; height:200px;
-        }
 
-        .left , .right{
-            width:200px; height:150px;
-        }
         .event img{
             width:100%; height:100%;
         }
+        #center {
+            width:1000px; height:1000px;
+        }
+        #center img{
+            width:100%; height:100%;
+        }
+        .rg{
+            writing-mode:horizontal-tb;
+        }
+        .up{background:blue;
+              
+        }
+        .right{background:red;}
+        .left{background:yellow;}
+        .down{background:green;}
+        .up,.right,.down{color:#eee;}
+        .up,.right,.down,.left{text-align:center; font-size:35px;
+            width:200px; height:200px;}
     </style>
 </head>
 <body>
     <table>
         <tr>
-            <td class="event one"></td>
-            <td class="up"></td>
-            <td class="up"></td>
-            <td class="up"></td>
-            <td class="up"></td>
-            <td class="up"></td>
-            <td class="event two"></td>
+            <td class="event one"><img src="./static/images/출발.png" alt="이미지"></td>
+            <td class="up"><div>서울</div></td>
+            <td class="up">부산</td>
+            <td class="up">광주</td>
+            <td class="up">전주</td>
+            <td class="up">제주</td>
+            <td class="event two"><img src="./static/images/올림픽.png" alt="이미지"></td>
         </tr>
         <tr>
-            <td class="left"></td>
-            <td rowspan="5" colspan="5"></td>
+            <td class="left">인천</td>
+            <td id="center" rowspan="5" colspan="5"><img src="./static/images/표지.jpeg" alt="이미지"></td>
 
-            <td class="right"></td>
+            <td class="right">천안</td>
         </tr>
         <tr>
-            <td class="left"></td>
+            <td class="left">대전</td>
            
 
 
 
 
-            <td class="right"></td>
+            <td class="right">안동</td>
         </tr>
         <tr>
-            <td class="left"></td>
+            <td class="left">청주</td>
             
             
 
 
  
-            <td class="right"></td>
+            <td class="right">경주</td>
         </tr>
         <tr>
-            <td class="left"></td>
+            <td class="left">세종</td>
             
           
 
 
 
-            <td class="right"></td>
+            <td class="right">춘천</td>
         </tr>
         <tr>
-            <td class="left"></td>
+            <td class="left">교토</td>
             
       
 
 
 
-            <td class="right"></td>
+            <td class="right">강릉</td>
         </tr>
         <tr>
             <td class="event three"><img src="./static/images/무인도2.png" alt="이미지"></td>
-            <td class="down"></td>
-            <td class="down"></td>
-            <td class="down"></td>
-            <td class="down"></td>
-            <td class="down"></td>
-            <td class="event four"></td>
+            <td class="down">울산</td>
+            <td class="down">대구</td>
+            <td class="down">포항</td>
+            <td class="down">후쿠오카</td>
+            <td class="down">오키나와</td>
+            <td class="event four"><img src="./static/images/비행기.png" alt="이미지"></td>
         </tr>
     </table>
 </body>
