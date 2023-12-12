@@ -1,41 +1,41 @@
 //board.js
 
-const zone_name=[
-    // ["출발","김포","의정부","파주","시홍","평택","김해","안양"],
-    "복지기금","화성","성남","창원","제주","용인","수원","울산",
-    "인천공항","청주","광주","부천","대구","남양주","인천","포항",
-    "복지기금납부","천안","부산","전주","서울","안산","대전",
-    "무인도","안양","김해","평택","시홍","파주","의정부","김포","출발"
+// const zone_name=[
+//     // ["출발","김포","의정부","파주","시홍","평택","김해","안양"],
+//     "복지기금","화성","성남","창원","제주","용인","수원","울산",
+//     "인천공항","청주","광주","부천","대구","남양주","인천","포항",
+//     "복지기금납부","천안","부산","전주","서울","안산","대전",
+//     "무인도","안양","김해","평택","시홍","파주","의정부","김포","출발"
     
-];
+// ];
 
-const zone_color=["#FF2424","#53C148","#FFBB00","#121212"];     // 각면의 색상
+// const zone_color=["#FF2424","#53C148","#FFBB00","#121212"];     // 각면의 색상
 
-const land_purchase=[   // 각 도시의 매입 가격( 만단위)
-    0, 25, 27, 26, 34, 28, 27, 39,
-    0, 16, 42, 20, 45, 19, 48, 27,
-    0, 21, 52, 20, 80, 22, 120,
-    0, 12, 10, 15, 12, 9, 9, 7, 0
-];
+// const land_purchase=[   // 각 도시의 매입 가격( 만단위)
+//     0, 25, 27, 26, 34, 28, 27, 39,
+//     0, 16, 42, 20, 45, 19, 48, 27,
+//     0, 21, 52, 20, 80, 22, 120,
+//     0, 12, 10, 15, 12, 9, 9, 7, 0
+// ];
 
-const bg_image=[ // 모서리구역의 배경이미지
-    "출발.png","무인도.jpg","올림픽.jpg","airplane.jpg"
-]
+// const bg_image=[ // 모서리구역의 배경이미지
+//     "출발.png","무인도.jpg","올림픽.jpg","airplane.jpg"
+// ]
 
 const special_func=[    // 모서리 구역의 기능
     // function(){};
 ];
 
 // 각 구역의 객체 생성자 함수
-// 구역 이름, 토지매입가격, 소유자, 색상, 기능(모서리부분), 이미지
-function zone_Object( name, purchase, owner, color, func, image){
-    this.name=name;
-    this.purchase=purchase;
-    this.owner=owner;
-    this.color=color;
-    this.func=func;
-    this.back=image;
-}
+// // 구역 이름, 토지매입가격, 소유자, 색상, 기능(모서리부분), 이미지
+// function zone_Object( name, purchase, owner, color, func, image){
+//     this.name=name;
+//     this.purchase=purchase;
+//     this.owner=owner;
+//     this.color=color;
+//     this.func=func;
+//     this.back=image;
+// }
 
 // 플레이어 생성자 함수
 function player(num, color){
@@ -54,31 +54,35 @@ let zone = new Array();     // 각 구역의 개체 저장 배열
 let player_list = new Array(); // 게임참가자
 
 // 함수정의
-function zone_create(){
-    for(var i=0;i<zone_name.length; i++ ){
-        var color = zone_color[0];
+// function zone_create(){
+//     for(var i=0;i<zone_name.length; i++ ){
+//         var color = zone_color[0];
 
-        if(i>=0 && i<=7)
-        color = zone_color[2];
-        if(i>=8&i<=23 & i%2==0)    //짝수
-        color = zone_color[3];
-        if(i>=8&i<=23 & i%2==1)    //홀수
-        color = zone_color[1];
-
-
-        var image = "";
-        if(i==0) image = bg_image[2];
-        if(i==8) image = bg_image[3];
-        if(i==23) image = bg_image[1];
-        if(i==31) image = bg_image[0];
+//         if(i>=0 && i<=7)
+//         color = zone_color[2];
+//         if(i>=8&i<=23 & i%2==0)    //짝수
+//         color = zone_color[3];
+//         if(i>=8&i<=23 & i%2==1)    //홀수
+//         color = zone_color[1];
 
 
-        zone.push( new zone_Object(
-            zone_name[i] , land_purchase[i],"", color,"",image
-        ) );
-    }
-    console.log(zone);
-};
+//         var image = "";
+//         if(i==0) image = bg_image[2];
+//         if(i==8) image = bg_image[3];
+//         if(i==23) image = bg_image[1];
+//         if(i==31) image = bg_image[0];
+
+
+//         zone.push( new zone_Object(
+//             zone_name[i] , land_purchase[i],"", color,"",image
+//         ) );
+//     }
+//     console.log(zone);
+// };
+
+
+
+
 
 // 구역객체들을 zone 클래스 div에 적용하기
 function zone_draw(){
@@ -114,7 +118,7 @@ function game_init(){
     $("#set_player").hide();
 }
 $(function(){
-    zone_create();
+    // zone_create();
     zone_draw();
 
     $("#enroll").on("click", game_init);
@@ -123,5 +127,13 @@ $(function(){
     });
     $("#player_number + label").text(2+"명");
 
-    $("input[type=color]").on("change",change_pcl);
+    // $("input[type=color]").on("change",change_pcl);
+
+    var xml = new XMLHttpRequest();
+    xml.onload=function(){
+        var data = JSON.parse(this.responseText);
+        console.log(data);
+    };
+    xml.open(GET,"./json");
+    xml.send();
 });
