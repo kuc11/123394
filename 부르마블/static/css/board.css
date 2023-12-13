@@ -21,6 +21,7 @@
 .zone{
     border:1px solid white;
     background: green ;
+    position:relative;
 }
 .top{height:200px;} 
 
@@ -120,4 +121,51 @@
     float:right;
     font-size:20px;
     padding:3px 10px;
+}
+
+.meeple{
+    position:absolute;
+    font-size:80px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index:10;
+}
+
+#dice_wrap{
+    position:absolute;
+    width:300px;
+    top:400px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.dice{
+    display:flex;
+    column-gap:20px;
+}
+
+.dicebt{
+    margin-top:20px;
+    text-align:center;
+}
+
+.dicebt button{
+    border:0;
+    background:saddlebrown;
+    color: #fff;
+    font-size: 40px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    box-shadow:4px 3px 3px #222;
+    cursor: pointer;
+}
+
+.dicebt button:active{
+    box-shadow: none;
+}
+
+.diceImg img{
+    box-shadow: 5px 5px 3px #111;
+    border-radius: 20px;
+    width:100%;
 }
