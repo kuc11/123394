@@ -18,9 +18,7 @@
 //     0, 12, 10, 15, 12, 9, 9, 7, 0
 // ];
 
-// const bg_image=[ // 모서리구역의 배경이미지
-//     "출발.png","무인도.jpg","올림픽.jpg","airplane.jpg"
-// ]
+
 
 const special_func=[    // 모서리 구역의 기능
     // function(){};
@@ -88,7 +86,7 @@ let player_list = new Array(); // 게임참가자
 function zone_draw(){
     $.each(zone, function(idx,obj){
         if(idx==0 || idx==8 || idx==23 || idx==31){
-        $(".zone").eq(idx).css("background-img","./static/image/"+obj.back);
+        $(".zone").eq(idx).css("background-image","url(./static/image/"+obj.back+")");
         $(".zone").eq(idx).css("background-size","cover");}
         else{
         $(".zone").eq(idx).children(".zone_name").text(obj.name);
@@ -129,11 +127,4 @@ $(function(){
 
     // $("input[type=color]").on("change",change_pcl);
 
-    var xml = new XMLHttpRequest();
-    xml.onload=function(){
-        var data = JSON.parse(this.responseText);
-        console.log(data);
-    };
-    xml.open(GET,"./json");
-    xml.send();
 });
