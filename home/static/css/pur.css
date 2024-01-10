@@ -1,0 +1,136 @@
+*{
+    padding:0; 
+    margin:0;
+    box-sizing:border-box;
+}
+#wrap{
+    position:relative;
+    width:1920px;
+    height:3100px;
+}
+#header{
+    position: absolute;
+    width: 1920px;
+    height: 300px;
+    left: 0px;
+    top: 0px;
+}
+/*간편가입*/
+#join{     
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    position: absolute;
+    width: 1920px;
+    height: 130px;
+    left: 0px;
+    top: 0px;
+    background: #000000; 
+    font-size: 48px;
+    line-height: 60px;
+    color: #FFFFFF;
+}
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 10px;
+    position: absolute;
+    width: 1920px;
+    height: 140px;
+    left: 0px;
+    top: 160px;
+}
+#menu1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 120px;
+    background: #909090;
+}
+i{
+    font-size: 60px;
+}
+#menu2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    margin: 0 auto;
+    width: 1020px;
+    height: 120px;
+    background: #919191;
+    font-size: 80px;
+    line-height: 97px;
+    color: #FFFFFF;
+    font-family:'Courier New', Courier, monospace;
+}
+#menu3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    margin: 0 auto;
+    width: 300px;
+    height: 120px;
+    background: #909090;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+#menu4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 0px;
+    gap: 10px;
+    margin: 0 auto;
+    width: 350px;
+    height: 120px;
+    background: #909090;
+    font-size: 24px;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+
+/* 내용 */
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 300px 0px;
+    gap: 10px;
+
+    position: absolute;
+    width: 1920px;
+    height: 2800px;
+    left: 0px;
+    top: 300px;
+}
+
+#subject{
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 88px;
+}
+#sort{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 50px 30px 10px;
+    gap: 10px;
+    width: 1320px;
+    height: 111px;
+}
