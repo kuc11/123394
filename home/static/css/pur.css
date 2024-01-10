@@ -10,7 +10,7 @@
 }
 #header{
     position: absolute;
-    width: 1920px;
+    width: 100%;
     height: 300px;
     left: 0px;
     top: 0px;
@@ -73,6 +73,8 @@ i{
     color: #FFFFFF;
     font-family:'Courier New', Courier, monospace;
 }
+
+/* 로그인 | 회원가입 */
 #menu3{
     display: flex;
     flex-direction: row;
@@ -88,6 +90,8 @@ i{
     line-height: 44px;
     color: #FFFFFF;
 }
+
+/* 장바구니/최근본항목 */
 #menu4{
     display: flex;
     flex-direction: row;
@@ -95,8 +99,8 @@ i{
     align-items: center;
     padding: 9px 0px;
     gap: 10px;
-    margin: 0 auto;
-    width: 350px;
+   
+    width: 390px;
     height: 120px;
     background: #909090;
     font-size: 24px;
@@ -118,19 +122,123 @@ i{
     left: 0px;
     top: 300px;
 }
-
+/* All */
 #subject{
     font-weight: 400;
     font-size: 70px;
     line-height: 88px;
 }
+
+/* 정렬 방식 */
 #sort{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
-    padding: 50px 30px 10px;
+    padding: 100px 30px 10px;
     gap: 10px;
     width: 1320px;
-    height: 111px;
+    height: 211px;
 }
+
+/* 낮은 가격 */
+.subsort{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    width: 130px;
+    height: 51px;
+    background: #88ACA0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+    text-align: center;
+    color: #FFFFFF;
+}
+#product_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 10px;
+
+    width: 1320px;
+    height: 1660px;
+    background:#909090;
+}
+
+#row1_img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    gap: 30px;
+    width: 1260px;
+    height: 400px;
+}
+.img{
+    width: 300px;
+    height: 400px;
+    background:#D9D9D9;
+}
+#row1_write{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 30px;
+    width: 1260px;
+    height: 120px;
+}
+.write{
+    width: 300px;
+    height: 100px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+    color: #000000;
+}
+#foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 1414px;
+    height: 649px;
+}
+#footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 40px;
+    width: 1414px;
+    height: 351px;
+    background: #909090;
+}
+#footer1{
+    position:relative;
+    width: 550px;
+    height: 250px;
+    background: #ECE5B6;
+}  
+#footer1_content{
+   position: absolute;
+    width: 454px;
+    height: 200px;
+    left: 25px;
+    top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;}
