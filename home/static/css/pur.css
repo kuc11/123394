@@ -16,15 +16,17 @@
     top: 0px;
 }
 /*간편가입*/
-#join{     
+#join ,#nav{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    padding: 10px;
     gap: 10px;
     position: absolute;
     width: 1920px;
+}
+#join{     
+    justify-content: center;
+    padding: 10px;
     height: 130px;
     left: 0px;
     top: 0px;
@@ -34,40 +36,32 @@
     color: #FFFFFF;
 }
 #nav{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 0px;
-    gap: 10px;
-    position: absolute;
-    width: 1920px;
     height: 140px;
     left: 0px;
     top: 160px;
 }
-#menu1{
+#menu1,#menu2,#menu3,#menu4{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #909090;
+}
+#menu1{
     width: 100px;
     height: 120px;
-    background: #909090;
 }
 i{
     font-size: 60px;
 }
 #menu2{
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 0px;
     gap: 10px;
     margin: 0 auto;
     width: 1020px;
     height: 120px;
-    background: #919191;
     font-size: 80px;
     line-height: 97px;
     color: #FFFFFF;
@@ -76,16 +70,12 @@ i{
 
 /* 로그인 | 회원가입 */
 #menu3{
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 0px;
     gap: 10px;
     margin: 0 auto;
     width: 300px;
     height: 120px;
-    background: #909090;
     font-size: 36px;
     line-height: 44px;
     color: #FFFFFF;
@@ -93,20 +83,18 @@ i{
 
 /* 장바구니/최근본항목 */
 #menu4{
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 9px 0px;
     gap: 10px;
-   
     width: 390px;
     height: 120px;
-    background: #909090;
     font-size: 24px;
     line-height: 44px;
     color: #FFFFFF;
 }
+
+
+
 
 /* 내용 */
 #content{
@@ -129,6 +117,8 @@ i{
     line-height: 88px;
 }
 
+
+
 /* 정렬 방식 */
 #sort{
     display: flex;
@@ -141,7 +131,7 @@ i{
     height: 211px;
 }
 
-/* 낮은 가격 */
+/* 정렬 */
 .subsort{
     display: flex;
     flex-direction: column;
@@ -159,6 +149,10 @@ i{
     text-align: center;
     color: #FFFFFF;
 }
+
+
+
+/*상품목록*/
 #product_list{
     display: flex;
     flex-direction: column;
@@ -168,9 +162,9 @@ i{
 
     width: 1320px;
     height: 1660px;
-    background:#909090;
+    background:#FFFFFF;
 }
-
+/*상품 1행 사진*/
 #row1_img{
     display: flex;
     flex-direction: row;
@@ -186,6 +180,7 @@ i{
     height: 400px;
     background:#D9D9D9;
 }
+/*상품 1행 이름 및 가격*/
 #row1_write{
     display: flex;
     flex-direction: row;
@@ -205,6 +200,9 @@ i{
     text-align: center;
     color: #000000;
 }
+
+
+/*바닥글*/
 #foot{
     display: flex;
     flex-direction: column;
