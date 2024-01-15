@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/a.css">
+    <script src="./static/javascirpt/test.js"></script>
+</head>
+<body>
+    <div class="inner_body">
+        <ul>
+            <li class="faq_block js-faq_block">
+                <div class="faq_header">
+                    <h3>Question 1</h3>
+                    <button type="button"><i class="fa-regular fa-square-plus"></i></button>
+                </div>
+                <div class="faq_body">
+                    <p>How to use this?</p>
+                </div>
+            </li>
+            <li class="faq_block js-faq_block">
+                <div class="faq_header">
+                    <h3>Question 2</h3>
+                    <button type="button"><i class="fa-regular fa-square-plus"></i></button>
+                </div>
+                <div class="faq_body">
+                    <p>How to use this?</p>
+                </div>
+            </li>
+            <li class="faq_block js-faq_block">
+                <div class="faq_header">
+                    <h3>Question 3</h3>
+                    <button type="button"><i class="fa-regular fa-square-plus"></i></button>
+                </div>
+                <div class="faq_body">
+                    <p>How to use this?</p>
+                </div>
+            </li>
+            <li class="faq_block js-faq_block">
+                <div class="faq_header">
+                    <h3>Question 4</h3>
+                    <button type="button"><i class="fa-regular fa-square-plus"></i></button>
+                </div>
+                <div class="faq_body">
+                    <p>How to use this?</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+
+</body>
+</html>  
+  <script>
+        const faqs = document.querySelectorAll('.js-faq_block');
+        faqs.forEach(faq => { new FAQ(faq); });
+    </script>
