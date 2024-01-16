@@ -115,34 +115,14 @@ i{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 100px 0px 0px 0px;
+    padding: 300px 0px 100px 0px;
     gap: 10px;
     width: 153px;
     height: 195px;
     font-size:80px;
 }
 
-/* 검색 */
-#search{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 25px;
-    gap: 10px;
-    width: 800px;
-    height: 100px;
-    background: #9DA9B1;
-}
 
-#searchin{
-    width: 600px;
-    height:50px;
-    font-size:25px;
-}
-
-i{font-size:40px;}
-button{background:none; border:0px;}
-button:hover{ cursor:pointer;}
 
 
 /* 질문 */
@@ -160,23 +140,28 @@ button:hover{ cursor:pointer;}
 
 /* 질문 유형 */
 
-
-#question_type{
+#question_sort button:hover{cursor:pointer;}
+#question_sort button:focus{color:#000000;}
+#question_sort{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px 0px 25px 70px;
-    gap: 52px;
+    padding: 0px 0px 25px 0px;
+    gap: 40px;
     width: 1620px;
     height: 55px;
     border-bottom: 1px solid #000000;
+    
 }
-#type {
-    width: 46px;
+#question_sort button {
+    width: 200px;
     height: 30px;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 30px;
+    border:none;
+    background:none;
+    color:#B1B1B1;
 }
 
 /*질문 리스트*/
@@ -193,17 +178,37 @@ ul{
     list-style-type:none;
     margin-right:10px;
 }
-#type:hover{cursor:pointer;}
-li{
-    padding:50px 20px;
-}
-.type{
+.title:hover{cursor:pointer;}
+  .panel-faq-container {
+    margin-bottom: -16px;
+  }
+.title{
     margin:0px 30px;
 }
-#answer{
+.answer{
     background-color: #eee;
     padding:0 10px;
     font-size:20px;
+    height: 0;
     overflow: hidden;
-    height:0px;
+    /* 변화가 시작되는 쪽에다가 transition 적용해준다 0 -> 300px 
+    왜? 닫기 버튼을 누를 때 변화가 티남 */
+    transition: all 1s;
+    padding:0px 40px;
 }
+.active {
+    display: block;
+    /* 높이를 정해줘야지만 transition이 적용됨 */
+    height: 200px;
+  }  
+  .type{
+    margin-right:40px;
+    color:#B1B1B1;
+  }
+  .container{
+    margin:80px 20px;
+  }
+  .del div{display:block;}
+  .chg div{display:block;}
+  .cal div{display:block;}
+  .etc div{display:block;}

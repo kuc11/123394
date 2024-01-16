@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./static/css/notice.css">
+    <!-- jquery CDN  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!--부트스트랩-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="./static/javascirpt/notice.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="join">카카오톡 1초 간편가입</div>
+            <div id="nav">
+                <div id="menu1"><i class="bi bi-list"></i></div>
+                <div id="menu2">DW_gromming</div>
+                <div id="menu3">로그인|회원가입</div>
+                <div id="menu4">장바구니/최근항목목록</div>
+            </div>
+        </div>
+        <div id="sub">
+            <div id="subtitle">
+                <b>고객센터</b> <p>무엇을 도와드릴까요?</p>
+            </div>
+        </div>
+        <div id="content">
+            <div id="link">
+                <div id="sitelink">
+                    <div id="FQA_site">FQA</div>
+                    <div id="notice_site">공지사항</div>
+                </div>
+            </div>
+            <div id="select">
+                <button class="type" onclick="show()">전체</button>
+                <button class="type" onclick="show1()">일반</button>
+                <button class="type" onclick="show2()">이벤트</button>
+            </div>
+            <table>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+
+                <tr class="event_table_row">
+                    <td>5</td>
+                    <td><strong class="event">이벤트</strong>   [홀리데이] 이벤트 당청자 발표</td>
+                    <td>DW_gromming</td>
+                    <td>2024-01-16</td>
+                </tr>
+                <tr class="normal_table_row">
+                    <td>4</td>
+                    <td><strong class="normal">일반</strong>   [공지] 배송 및 택배사 안내</td>
+                    <td>DW_gromming</td>
+                    <td>2024-01-02</td>
+                </tr>
+                <tr class="event_table_row">
+                    <td>3</td>
+                    <td><strong class="event">이벤트</strong>   [DW_gromming - 굽네] 이벤트 당청자 발표</td>
+                    <td>DW_gromming</td>
+                    <td>2023-12-24</td>
+                </tr>
+                <tr class="normal_table_row">
+                    <td>2</td>
+                    <td><strong class="normal">일반</strong>   [공지] 주문 취소/변경 및 교환/반품 안내</td>
+                    <td>DW_gromming</td>
+                    <td>2023-08-14</td>
+                </tr>
+                <tr class="normal_table_row">
+                    <td>1</td>
+                    <td><strong class="normal">일반</strong>   [공지] 상품 구매 제한 강화 운영 안내</td>
+                    <td>DW_gromming</td>
+                    <td>2023-07-21</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+</html>
