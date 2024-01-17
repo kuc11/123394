@@ -222,8 +222,9 @@ height: 95px;
     border-left:1px solid #000000;
     border-right:1px solid #000000;
 }
-
-
+button:hover{cursor:pointer;}
+a{text-decoration:none;
+    color:#000000;}
 /*table*/
 table{
     width:100%;
